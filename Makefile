@@ -11,5 +11,5 @@ up:
 composer-update:
 	docker exec grics-laravel-docker bash -c "composer update"
 data:
-	docker exec grics-laravel-docker "php artisan migrate"
-	docker exec grics-laravel-docker "php artisan db:seed"
+	docker exec -it grics-laravel-docker php artisan migrate  
+	docker exec -it grics-laravel-docker php artisan db:seed
