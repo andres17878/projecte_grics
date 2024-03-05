@@ -5,6 +5,7 @@ services:
     build: .
     volumes:
       - ./laravel-app:/var/www/html
+      - ./frontend:/var/www/html/public
     ports:
       - 9000:80
   
