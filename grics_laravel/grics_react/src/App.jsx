@@ -1,10 +1,12 @@
+import Footer from './Components/Footer/Footer.jsx'
 import Menu from './Components/Navbar/Menu.jsx'
 
 function App() {
   return (
-    <div className="container">
+    <>
       <Menu />
-    </div>
+      <Footer />
+    </>
   )
 }
 
