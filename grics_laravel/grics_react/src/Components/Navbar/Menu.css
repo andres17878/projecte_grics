@@ -5,13 +5,13 @@
     align-items: center;
     justify-content: space-between;
     background: #002651;
-    padding: 15px 7%;
+    padding: 10px 7%;
     color: white;
     font-weight: bold;
 }
 
 .logo{
-    width: 160px;
+    width: 95px;
     cursor: pointer;
 }
 
@@ -23,13 +23,18 @@ ul{
 
 ul li{
     display: inline-block;
-    margin: 10px 20px;
-    font-size: 18px;
-    cursor: pointer
+    margin: 0px 35px;
+    font-size: 19px;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+ul li:hover {
+    color: #BD2043;
 }
 
 .toggle-lang{
-    width: 50px;
+    width: 55px;
     cursor: pointer;
-    margin-left: 40px;
+    margin-left: 38px;
 }
