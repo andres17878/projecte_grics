@@ -11,3 +11,26 @@
   width: 100vw;
   min-height: 100vh;
 }
+
+#img_principal{
+  width: 100%;
+  height: 100vh;
+}
+
+#img_facultat{
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+}
+
+#img_principal {
+  position: relative;
+}
+
+#grics_img_principal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+

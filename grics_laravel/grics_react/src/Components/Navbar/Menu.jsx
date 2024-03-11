@@ -5,7 +5,7 @@ import lang from '../../assets/lang.svg'
 function Menu(){
     return (
         <div className="menu">
-            <img src={logo} alt="logo" className="logo" />
+            <img src={logo} alt="logo" className="logo" id="logo" />
             <ul>
                 <li>Membres</li>
                 <li>Recerca</li>
