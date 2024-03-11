@@ -1,5 +1,6 @@
 import Footer from './Components/Footer/Footer.jsx'
 import Menu from './Components/Navbar/Menu.jsx'
+import Noticia from './Components/Actualitat/Noticia.jsx'
 import gricsImgPrincipal from './assets/grics_img_principal.svg'
 
 function App() {
