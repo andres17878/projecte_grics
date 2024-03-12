@@ -1,5 +1,5 @@
 
-import Comp_Membres from './MiembroComp/MiembroComp'
+import Comp_Membres from '../MiembroComp/MiembroComp'
 function Membre() {
   return (
     <>
