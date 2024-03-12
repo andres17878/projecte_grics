@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import HomePage from './Components/HomePage/HomePage';
 import Membres from './Components/Membres/Membres';
 import Recerca from './Components/Recerca/Recerca';
@@ -9,12 +9,14 @@ import Contacte from './Components/Contacte/Contacte';
 function App() {
   return (
     <Router>
-      <Route path="/" component={HomePage} />
-      <Route path="/membres" component={Membres} />
-      <Route path="/recerca" component={Recerca} />
-      <Route path="/publicacions" component={Publicacions} />
-      <Route path="/actualitat" component={Actualitat} />
-      <Route path="/contacte" component={Contacte} />
+      <Routes>
+        <Route path="/" element={HomePage} />
+        <Route path="/membres" element={Membres} />
+        <Route path="/recerca" element={Recerca} />
+        <Route path="/publicacions" element={Publicacions} />
+        <Route path="/actualitat" element={Actualitat} />
+        <Route path="/contacte" element={Contacte} />
+      </Routes>
     </Router>
   )
 }
