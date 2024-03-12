@@ -2,14 +2,12 @@
     background-color: rgb(0, 38, 81);
     color: white;
     width: 100%;
-    font-family: 'Roboto condensed';
     font-weight: bold;    
 }
 
 .Logos {
-    margin-top: 1em;
+    margin-top: 0.2em;
     width: 45%;
-    height: 5em;
 }
 
 .Logos,
@@ -23,25 +21,15 @@
     display: flex;
     flex-wrap: wrap; 
     justify-content: center; 
-    margin-top: 1em; 
-    padding: 0; 
-    font-size: medium;
-}
-
-ul {
+    margin-top: 0.2em; 
     list-style: none;
-    padding: 0;
-    text-align: center;
-    margin: 0; 
 }
 
-ul li {
-    margin: 0; 
-    padding: 0.5em; 
+.list-container li {
+    width: 45%; 
+    font-size: 1.2em; 
+    margin: 0.2em;
 }
-
-
-
 
 a {
     color: white;
@@ -57,7 +45,7 @@ a:hover {
     display: flex;
     flex-wrap: wrap; 
     justify-content: space-between; 
-    padding: 1em; 
+    padding: 0.5em;
 }
 
 .desenvolupat {
@@ -65,7 +53,7 @@ a:hover {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 1em;
+    margin-bottom: 0.7em;
 }
 
 @media screen and (min-width: 768px) {
