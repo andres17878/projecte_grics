@@ -1,4 +1,3 @@
-import React from 'react';
 import './Noticia.css';  
 import foto from '../../assets/fotoBarcelona.webp';
 
