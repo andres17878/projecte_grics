@@ -13,7 +13,6 @@ function Menu(){
                 <li>Actualitat</li>
                 <li>Contacte</li>
             </ul>
-
             <img src={lang} alt="lang" className="toggle-lang" />
             
         </div>

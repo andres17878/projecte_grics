@@ -1,54 +1,57 @@
-.menu{
-    width: 100%;
-    height: auto;
+.menu {
     display: flex;
-    flex: 1 1 auto;
     align-items: center;
     justify-content: space-between;
     background: #002651;
-    padding: 10px 4%;
     color: white;
     font-weight: bold;
     font-size: medium;
-    position: sticky;
-    top: 0;
-    left: 0;
-    z-index: 9999;
 }
 
-.logo{
+.idioma {
+    margin-right: 3%; 
+}
+
+.logo {
     width: 6em;
     height: auto;
     cursor: pointer;
+    margin-left: 3%; 
 }
 
-
-ul{
+ul {
     list-style: none;
     text-align: center;
     display: flex;
 }
 
-ul li{
+ul li {
     display: flex;
-    margin: 0px 75px;
     font-size: 1.5em;
     cursor: pointer;
     transition: color 0.3s ease;
 }
 
-.menu li{
-    margin: 0 70px;
+.menu li {
+    margin: 0 2em; 
 }
 
 ul li:hover {
     color: #BD2043;
 }
 
-.toggle-lang{
-    display: flex;
-    width: 80px;
+.toggle-lang {
+    width: 5%;
     height: auto;
-    cursor: pointer;
-    margin-left: 10px;
+    margin-right: 3%; 
+}
+
+@media only screen and (max-width: 768px) {
+    .menu {
+        flex-direction: column; 
+    }
+    
+    .idioma, .logo, .toggle-lang {
+        margin: 1em 0; /
+    }
 }
