@@ -1,9 +1,12 @@
-import './Membres.css'
+import './MiembroComp.css'
 import membreImg from '../../assets/membre/avatar.png'
-function Membres(){
-    return(
+function Comp_Membres(){
+    return( 
         <div className="miembros">
-            <img src={membreImg} alt="miembro" className="imgMiembro" />
+            <div className='portaImagen'>
+                <img src={membreImg} alt="miembro" className="imgMiembro" />
+            </div>
+            
             <ul>
                 <li id="li">Nom</li>
                 <li id="li">Cognom</li>
@@ -15,4 +18,4 @@ function Membres(){
         </div>
     )
 }
-export default Membres
+export default Comp_Membres

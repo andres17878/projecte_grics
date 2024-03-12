@@ -17,8 +17,9 @@
     height: auto;
     cursor: pointer;
     margin-left: 3%; 
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
 }
-
 ul {
     list-style: none;
     text-align: center;
@@ -41,7 +42,7 @@ ul li:hover {
 }
 
 .toggle-lang {
-    width: 5%;
+    width: 4%;
     height: auto;
     margin-right: 3%; 
 }
@@ -52,6 +53,6 @@ ul li:hover {
     }
     
     .idioma, .logo, .toggle-lang {
-        margin: 1em 0; /
+        margin: 1em 0; 
     }
 }
