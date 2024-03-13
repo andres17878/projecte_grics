@@ -2,6 +2,7 @@ import './Menu.css'
 import logo from '../../assets/logo.svg'
 import logoHover from '../../assets/grics_logo_blanco.png'
 import lang from '../../assets/lang.svg'
+import { Link } from 'react-router-dom'
 
 function Menu(){
     return (
@@ -11,11 +12,12 @@ function Menu(){
                 <img src={logoHover} alt="Imagen Hover" className="imagen-hover"></img>
             </div>
             <ul>
-                <li>Membres</li>
-                <li>Recerca</li>
-                <li>Publicacions</li>
-                <li>Actualitat</li>
-                <li>Contacte</li>
+                <li> <Link to="/membres">Membres</Link></li>
+                <li> <Link to="/recerca">Recerca</Link></li>
+                <li> <Link to="/publicacions">Publicacions</Link></li>
+                <li> <Link to="/actualitat">Actualitat</Link></li>
+                <li> <Link to="/contacte">Contacte</Link></li>
+
             </ul>
             <img src={lang} alt="lang" className="toggle-lang" />
             

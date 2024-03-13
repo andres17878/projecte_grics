@@ -1,0 +1,39 @@
+/* Estilo para el componente "miembros" */
+
+.miembros {
+    width: 700px;
+    height: 300px;
+    display: flex; 
+    align-items:left;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: #aeacac;
+    border-radius: 15px; 
+}
+
+.portaImagen {
+    max-width: 40%;
+}
+
+.imgMiembro {
+    max-width: 100%;
+    padding:10px ;
+    border-radius: 15px; 
+}
+
+.miembros ul{
+    list-style-type: none;
+    margin: 0;
+    padding-right: 15em;
+    display: flex;
+    flex-direction: column;
+}
+
+#li {
+    margin-bottom: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    
+    
+}
+
