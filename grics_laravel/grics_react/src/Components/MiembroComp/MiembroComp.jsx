@@ -2,7 +2,8 @@ import './MiembroComp.css'
 import membreImg from '../../assets/membre/avatar.png'
 function Comp_Membres(){
     return( 
-        <div className="miembros">
+        <div className='divMayor'>
+            <div className="miembros">
             <div className='portaImagen'>
                 <img src={membreImg} alt="miembro" className="imgMiembro" />
             </div>
@@ -15,6 +16,7 @@ function Comp_Membres(){
                 <li id="li">CV</li>
                 <li id="li">Descripción</li>
             </ul>
+        </div>
         </div>
     )
 }

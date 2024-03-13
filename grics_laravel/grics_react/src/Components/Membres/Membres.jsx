@@ -1,6 +1,8 @@
+import './Membres.css'
 import Menu from "../Navbar/Menu";
 import Footer from "../Footer/Footer";
 import Comp_Membres from '../MiembroComp/MiembroComp'
+import general from '../../assets/membre/general.jpg'
 function Membre() {
   return (
     <div className="paginaMembres">
@@ -8,21 +10,29 @@ function Membre() {
 
 
       <div className="contenedorMembres">
-          <div className="img">
-              <img className="generalMiembros"  alt="foto principal" />
+          <div className="imgMembres">
+              <img className="generalMiembros" src={general} alt="foto principal" />
           </div>
-          <div>
+          {/* <div className='m1'>
             <Comp_Membres/>
           </div>
-          <div>
+          <br/>
+          <div className='m2'>
             <Comp_Membres/>
           </div>
-          <div>
+          <br/>
+          <div className='m3'>
             <Comp_Membres/> 
           </div>
-          <div>
+          <br/>
+          <div className='m4'>
             <Comp_Membres/>
-          </div>
+          </div> */}
+          <Comp_Membres/> 
+          <Comp_Membres/> 
+          <Comp_Membres/> 
+          <Comp_Membres/> 
+          <Comp_Membres/> 
       </div>
     <Footer />
     </div>
