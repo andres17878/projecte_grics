@@ -6,12 +6,37 @@ import {
   RouterProvider,
 } from 'react-router-dom';
 import HomePage from './Components/HomePage/HomePage';
+import Membres from './Components/Membres/Membres';
+import Recerca from './Components/Recerca/Recerca';
+import Publicacions from './Components/Publicacions/Publicacions';
+import Actualitat from './Components/Actualitat/Actualitat';
+import Contacte from './Components/Contacte/Contacte';
 
 
 const router = createBrowserRouter([
   {
     path: '/',
     element: <HomePage />,
+  },
+  {
+    path: '/membres',
+    element: <Membres />,
+  },
+  {
+    path: '/recerca',
+    element: <Recerca />,
+  },
+  {
+    path: '/publicacions',
+    element: <Publicacions />,
+  },
+  {
+    path: '/actualitat',
+    element: <Actualitat />,
+  },
+  {
+    path: '/contacte',
+    element: <Contacte />,
   },
 ]);
 
