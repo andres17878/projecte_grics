@@ -10,13 +10,8 @@ function HomePage() {
         <div className="home_page">
             <Menu />
 
-
-            <div className="home_page_content">
-                <div className="img_container">
-                    <img className="foto_principal" src={fotoPrincipal} alt="foto principal" />
-                    <img className="logo_principal" src={logoPrincipal} alt="logo principal" />
-                </div>
-            </div>
+            
+            
             <Footer />
         </div>
     )
