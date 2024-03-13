@@ -13,13 +13,35 @@
 }
 
 .logo {
-    width: 6em;
-    height: auto;
-    cursor: pointer;
+    width: 7em;
+    height:4em;
+    position: relative;
     margin-left: 3%; 
     margin-top: 0.5em;
     margin-bottom: 0.5em;
-}
+  }
+  
+  .logo img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: opacity 0.5s ease; /* transición suave */
+  }
+  
+  .imagen-hover {
+    opacity: 0; /* imagen oculta por defecto */
+  }
+  
+  .logo:hover .imagen-normal {
+    opacity: 0; /* oculta la imagen normal cuando el contenedor se está poniendo en hover */
+  }
+  
+  .logo:hover .imagen-hover {
+    opacity: 1; /* muestra la imagen de hover cuando el contenedor se está poniendo en hover */
+  }
+
 ul {
     list-style: none;
     text-align: center;

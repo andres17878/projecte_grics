@@ -1,11 +1,15 @@
 import './Menu.css'
 import logo from '../../assets/logo.svg'
+import logoHover from '../../assets/grics_logo_blanco.png'
 import lang from '../../assets/lang.svg'
 
 function Menu(){
     return (
         <div className="menu">
-            <img src={logo} alt="logo" className="logo" id="logo" />
+            <div className="logo">
+                <img src={logo} alt="Imagen Normal" className="imagen-normal"></img>
+                <img src={logoHover} alt="Imagen Hover" className="imagen-hover"></img>
+            </div>
             <ul>
                 <li>Membres</li>
                 <li>Recerca</li>
