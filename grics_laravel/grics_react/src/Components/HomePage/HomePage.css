@@ -21,3 +21,15 @@
     z-index: 1;
 
 }
+
+.descripcio{
+    display: flex;
+    width: 45%;
+    margin-left: 10%;
+    margin-top: 2em;
+    margin-bottom: 2em;
+    text-align: center;
+}
+.titulo{
+    margin-bottom: 1.5em;
+}
