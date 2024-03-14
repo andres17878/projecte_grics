@@ -36,7 +36,7 @@ function HomePage() {
                             id est laborum.</p>
                     </div>
                     <div className="foto">
-
+                        <img src="/src/assets/grup_consolidat.svg" alt="Imagen Edificio"></img>
                     </div>
                 </div>
             </div>
