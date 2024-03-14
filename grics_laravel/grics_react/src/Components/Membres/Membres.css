@@ -11,5 +11,14 @@
     display: flex;
     justify-content: center;
     align-items: center;
-   
+}
+
+.Membress{
+    display: flex;
+    justify-content:space-around;
+    flex-wrap: wrap;
+}
+
+[class^="div"] {
+    padding: 2%;
 }

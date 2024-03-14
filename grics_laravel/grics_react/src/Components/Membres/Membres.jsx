@@ -13,26 +13,33 @@ function Membre() {
           <div className="imgMembres">
               <img className="generalMiembros" src={general} alt="foto principal" />
           </div>
-          {/* <div className='m1'>
-            <Comp_Membres/>
+          <div className='Membress'>
+            <div className='div1'>  
+              <Comp_Membres/> 
+            </div>
+            <div className='div2'>  
+              <Comp_Membres/> 
+            </div>
+            <div className='div3'>  
+              <Comp_Membres/> 
+            </div>
+            <div className='div4'>  
+              <Comp_Membres/> 
+            </div>
+            <div className='div5'>  
+              <Comp_Membres/> 
+            </div>
+            <div className='div6'>  
+              <Comp_Membres/> 
+            </div>
+            <div className='div7'>  
+              <Comp_Membres/> 
+            </div>
+            <div className='div8'>  
+              <Comp_Membres/> 
+            </div>
           </div>
-          <br/>
-          <div className='m2'>
-            <Comp_Membres/>
-          </div>
-          <br/>
-          <div className='m3'>
-            <Comp_Membres/> 
-          </div>
-          <br/>
-          <div className='m4'>
-            <Comp_Membres/>
-          </div> */}
-          <Comp_Membres/> 
-          <Comp_Membres/> 
-          <Comp_Membres/> 
-          <Comp_Membres/> 
-          <Comp_Membres/> 
+          
       </div>
     <Footer />
     </div>
