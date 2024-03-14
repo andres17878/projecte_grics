@@ -23,6 +23,9 @@ const Footer = () => {
             <li><a href="https://google.com">Condicions d’ús</a></li>
             <li><a href="https://google.com">Política de cookies</a></li>
           </ul>
+          <div>
+          
+          </div>
 
       </div>
     </footer>
