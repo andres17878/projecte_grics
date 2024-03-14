@@ -1,3 +1,4 @@
+
 .menu {
     display: flex;
     align-items: center;
@@ -43,6 +44,8 @@
   }
 
 ul {
+    color: white;
+    text-decoration: none;
     list-style: none;
     text-align: center;
     display: flex;
@@ -57,10 +60,6 @@ ul li {
 
 .menu li {
     margin: 0 2em; 
-}
-
-ul li:hover {
-    color: #BD2043;
 }
 
 .toggle-lang {

@@ -24,7 +24,6 @@ const Footer = () => {
             <li><a href="https://google.com">Política de cookies</a></li>
           </ul>
           <div>
-          
           </div>
 
       </div>

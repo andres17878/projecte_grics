@@ -11,7 +11,7 @@ function Menu(){
                 <img src={logo} alt="Imagen Normal" className="imagen-normal"></img>
                 <img src={logoHover} alt="Imagen Hover" className="imagen-hover"></img>
             </div>
-            <ul>
+            <ul className="enlaces">
                 <li> <Link to="/membres">Membres</Link></li>
                 <li> <Link to="/recerca">Recerca</Link></li>
                 <li> <Link to="/publicacions">Publicacions</Link></li>

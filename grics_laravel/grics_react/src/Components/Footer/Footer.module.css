@@ -30,7 +30,10 @@
     font-size: 1.2em; 
     margin: 0.2em;
 }
-
+.list-container li:hover{
+    color: #BD2043;
+    text-decoration: underline;
+}
 a {
     color: white;
     text-decoration: none; 
@@ -38,7 +41,6 @@ a {
 
 a:hover {
     color: #BD2043;
-    text-decoration: underline; 
 }
 
 .Container {
