@@ -1,9 +1,13 @@
 import './Actualitat.css'
+import Menu from '../Navbar/Menu'
+import Footer from '../Footer/Footer'
 
 export default function Actualitat() {
     return (
         <div className="actualitat">
-            <h1>Actualitat</h1>
+            <Menu/>
+
+            <Footer/>
         </div>
     )
 }
