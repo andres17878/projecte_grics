@@ -1,0 +1,47 @@
+body{
+    font-family: "Roboto Condensed", sans-serif;
+}
+.divForm {
+    font-family: "Roboto Condensed", sans-serif;
+    width: 40vw;
+    height: 40vw;
+    margin:  auto;
+    padding: 30px;
+    border: 1px solid #ccc;
+    background-color: #002651;
+    color: white;
+    border-radius: 10px;
+  }
+  
+  .spaceContacte {
+    margin-bottom: 20px;
+  }
+  
+  .spaceContacte label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  .spaceContacte input[type="text"],
+  .spaceContacte textarea {
+    margin: auto;
+    width: 95%;
+    padding: 15px;
+    margin-bottom: 50px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .spaceContacte textarea {
+    font-family: "Roboto Condensed", sans-serif;    
+    height: 100px;
+  }
+  
+  .spaceContacte input[type="checkbox"] {
+    margin-right: 5px;
+  }
+  
+  .spaceContacte button[type="submit"]:hover {
+    background-color: #0056b3;
+  }
+  
