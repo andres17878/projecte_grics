@@ -2,8 +2,8 @@ import "./HomePage.css";
 import Menu from "../Navbar/Menu";
 import Footer from "../Footer/Footer";
 import '../../index.css';
-import fotoPrincipal from '../../assets/facultat1.gif'
-import logoPrincipal from '../../assets/logo_principal.svg'
+import fotoPrincipal from '../../assets/Home/facultat1.gif'
+import logoPrincipal from '../../assets/Logos/grics_logo_amplio.svg'
 
 function HomePage() {
     return (
@@ -36,7 +36,7 @@ function HomePage() {
                             id est laborum.</p>
                     </div>
                     <div className="foto">
-                        <img src="/src/assets/grup_consolidat.svg" alt="Imagen Edificio"></img>
+                        <img src="/src/assets/Home/grup_consolidat.svg" alt="Imagen Edificio"></img>
                     </div>
                 </div>
             </div>
