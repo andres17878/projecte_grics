@@ -61,19 +61,59 @@ ul li {
 .menu li {
     margin: 0 2em; 
 }
-
-.toggle-lang {
-    width: 4%;
-    height: auto;
-    margin-right: 3%; 
+.enlaces{
+  margin-top: 0.4em;
+}
+.custom-dropdown {
+  background-color: transparent; 
+  border: 2px solid white; 
+  color: white; 
 }
 
-@media only screen and (max-width: 768px) {
-    .menu {
-        flex-direction: column; 
-    }
-    
-    .idioma, .logo, .toggle-lang {
-        margin: 1em 0; 
-    }
+.custom-dropdown .dropdown-toggle {
+  background-color: transparent !important; 
+  color: white;
+  border: none !important; 
+}
+
+.custom-dropdown .dropdown-menu {
+  background-color: #002651; 
+  border: 2px solid white; 
+}
+
+.custom-dropdown .dropdown-item {
+  color: white; 
+}
+
+.custom-dropdown .dropdown-item:hover {
+  background-color: #004080; 
+}
+
+
+@media only screen and (max-width: 1150px) {
+  .menu {
+      flex-direction: column; 
+  }
+  
+  .idioma, .logo, .dropdown-basic{
+      margin: 1em 0; 
+  }
+
+}
+@media only screen and (max-width: 786px) {
+  .menu {
+      flex-direction: column; 
+  }
+  
+  .idioma, .logo, .toggle-lang {
+      margin: 1em 0; 
+  }
+
+  ul {
+      flex-direction: column;
+  }
+
+  ul li {
+      margin: 0.5em 0; /
+  }
 }

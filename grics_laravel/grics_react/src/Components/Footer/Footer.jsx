@@ -7,10 +7,11 @@ const Footer = () => {
 
       <div className={styles["Container"]}>
           <div className={styles["Logos"]}>
-            <img src='/src/assets/logo.svg' alt="Grics Logo"></img>
-            <img src='/src/assets/logo.svg' alt="Grics Logo"></img>
-            <img src='/src/assets/logo.svg' alt="Grics Logo"></img>
-            <img src='/src/assets/logo.svg' alt="Grics Logo"></img>
+            <img src='/src/assets/Logos/logo.svg' alt="Grics Logo"></img>
+            <img src='/src/assets/Logos/logo.svg' alt="Grics Logo"></img>
+            <img src='/src/assets/Logos/logo.svg' alt="Grics Logo"></img>
+            <img src='/src/assets/Logos/logo.svg' alt="Grics Logo"></img>
+
 
 
           </div>
@@ -24,7 +25,7 @@ const Footer = () => {
             <li><a href="https://google.com">Política de cookies</a></li>
           </ul>
           <div >
-               <img src='/src/assets/login_logo.svg' alt='Login' className={styles.login}></img>
+               <img src='/src/assets/Home/login_logo.svg' alt='Login' className={styles.login}></img>
           </div>
 
       </div>
