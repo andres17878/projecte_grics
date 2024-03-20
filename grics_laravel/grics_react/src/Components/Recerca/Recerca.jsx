@@ -7,7 +7,7 @@ export default function Recerca() {
     return (
         <div className="recerca">
             <Menu/>
-            <div className='titulo'>
+            <div className='titulo-recerca'>
                 <div className='line-1'></div>
                 <h1 className='pppp'>RECERCA</h1>
                 <div className='line-2'></div>
