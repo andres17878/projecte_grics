@@ -62,18 +62,22 @@ ul li {
     margin: 0 2em; 
 }
 .enlaces{
-  margin-top: 0.4em;
+  margin-top: 1em;
 }
 .custom-dropdown {
   background-color: transparent; 
-  border: 2px solid white; 
   color: white; 
+  margin-right: 2em;
+  border: 3px solid white; 
+  border-radius: 2em;
+
 }
 
 .custom-dropdown .dropdown-toggle {
   background-color: transparent !important; 
   color: white;
   border: none !important; 
+
 }
 
 .custom-dropdown .dropdown-menu {
