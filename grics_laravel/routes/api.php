@@ -24,3 +24,8 @@ Route::get('prueba', function(Request $request){
         'status' => 'OK'
     ]);
 });
+
+Route::get('allMembres', function(Request $request){
+    $membres = \DB::table('membres')->get();
+    return response() ->json($membres);
+});
