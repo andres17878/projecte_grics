@@ -26,7 +26,7 @@ function Menu(){
                 <img src={lang} alt="lang" />
             </Dropdown.Toggle>
             <Dropdown.Menu>
-                <Dropdown.Item href="#/action-1">Castella</Dropdown.Item>
+                <Dropdown.Item href="#/action-1">Castellano</Dropdown.Item>
                 <Dropdown.Item href="#/action-2">Català</Dropdown.Item>
                 <Dropdown.Item href="#/action-3">English</Dropdown.Item>
             </Dropdown.Menu>
