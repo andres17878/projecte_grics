@@ -6,20 +6,20 @@ function Contacte_C() {
             <div className="spaceContacte">
                 <form className='form'>
                     <div>
-                        <label htmlFor="nombre">Nombre:</label>
-                        <input type="text" id="nombre" name="nombre" placeholder="Nombre" />
+                        <label htmlFor="nombre">Nom:</label>
+                        <input type="text" id="nombre" name="nombre" placeholder="Nom" />
                     </div>
                     <div>
-                        <label htmlFor="apellido">Apellido:</label>
-                        <input type="text" id="apellido" name="apellido" placeholder="Apellido" />
+                        <label htmlFor="apellido">Cognom:</label>
+                        <input type="text" id="apellido" name="apellido" placeholder="Cognom" />
                     </div>
                     <div>
-                        <label htmlFor="consulta">Consulta:</label>
-                        <textarea id="consulta" name="consulta" placeholder='Escribe' />
+                        <label htmlFor="consulta">Escriu aqui la teva consulta::</label>
+                        <textarea id="consulta" name="consulta" placeholder='...' />
                     </div>
                     <div>
                         <input type="checkbox" id="terminos" name="aceptaTerminos"/>
-                        <label htmlFor="terminos">Acepto los términos y condiciones</label>
+                        <label htmlFor="terminos">Aceptar términos i condicions</label>
                     </div>
                     <Boton/>
                 </form>
