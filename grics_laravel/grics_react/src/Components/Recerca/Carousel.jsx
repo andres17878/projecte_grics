@@ -2,6 +2,8 @@ import './Carousel.css'
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 import Contenido from './Contenido';
+import axios from 'axios';
+
 
 
 export default function prueba() {
@@ -26,25 +28,68 @@ export default function prueba() {
     }
   };
 
+
+
   const contenidoData = [
     {
       id:1,
-      imgUrl: '../../assets/Recerca/Rectangle 282.svg',
+      imgUrl: '/home/austria/Escritorio/projecte_grics/grics_laravel/grics_react/src/assets/Recerca/Rectangle282.svg',
+      alt:"Imagen de ejemplo 1",
       texto:"Texto de ejemplo 1"
-    },
-    {
+    },    {
       id:2,
-      imgUrl: '../../assets/Recerca/Rectangle 282.svg',
+      imgUrl: '/home/austria/Escritorio/projecte_grics/grics_laravel/grics_react/src/assets/Recerca/Rectangle282.svg',
+      alt:"Imagen de ejemplo 2",
       texto:"Texto de ejemplo 2"
-    },
-    {
+    },    {
       id:3,
-      imgUrl: '../../assets/Recerca/Rectangle 282.svg',
+      imgUrl: '/home/austria/Escritorio/projecte_grics/grics_laravel/grics_react/src/assets/Recerca/Rectangle282.svg',
+      alt:"Imagen de ejemplo 3",
       texto:"Texto de ejemplo 3"
+    },    {
+      id:4,
+      imgUrl: '/home/austria/Escritorio/projecte_grics/grics_laravel/grics_react/src/assets/Recerca/Rectangle282.svg',
+      alt:"Imagen de ejemplo 4",
+      texto:"Texto de ejemplo 4"
+    },    {
+      id:5,
+      imgUrl: '/home/austria/Escritorio/projecte_grics/grics_laravel/grics_react/src/assets/Recerca/Rectangle282.svg',
+      alt:"Imagen de ejemplo 5",
+      texto:"Texto de ejemplo 5"
+    },    {
+      id:6,
+      imgUrl: '/home/austria/Escritorio/projecte_grics/grics_laravel/grics_react/src/assets/Recerca/Rectangle282.svg',
+      alt:"Imagen de ejemplo 6",
+      texto:"Texto de ejemplo 6"
+    },    {
+      id:7,
+      imgUrl: '/home/austria/Escritorio/projecte_grics/grics_laravel/grics_react/src/assets/Recerca/Rectangle282.svg',
+      alt:"Imagen de ejemplo 7",
+      texto:"Texto de ejemplo 7"
     }
   ]
-  const contenido = contenidoData.map(item => (
-    <Contenido url={item.imgUrl} texto={item.texto}/>
+  const [data, setData] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
+
+  useEffect(() => {
+      axios.get(`http://localhost:8000/api/linias`)
+      .then((response) => {
+          setData(response.data);
+          datos = response.data;
+          setLoading(false);
+      })
+      .catch((error) => {
+          setError(error);
+          setLoading(false);
+      });
+  });
+
+  if (loading) return <p>Loading...</p>;
+  if (error) return <p>Error!</p>;
+
+  const contenido = datos.map(item => (
+    <Contenido id={item.id}/>
   ))
     return (
         <div >
