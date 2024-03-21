@@ -4,7 +4,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './Menu.css';
 import logo from '../../assets/Logos/grics_logo_amplio.svg';
 import logoHover from '../../assets/Logos/grics_logo_amplio+blanco.svg';
-import lang from '../../assets/Home/lang.svg';
+import lang from '../../assets/Home/idioma.svg';
 import { Link } from 'react-router-dom';
 
 function Menu(){
@@ -23,7 +23,7 @@ function Menu(){
             </ul>
             <Dropdown className="custom-dropdown">
             <Dropdown.Toggle variant="success" className="dropdown-basic">
-                <img src={lang} alt="lang" />
+                <img src={lang} alt="Icono idiomas" className='iconoMundo' />
             </Dropdown.Toggle>
             <Dropdown.Menu>
                 <Dropdown.Item href="#/action-1">Castellano</Dropdown.Item>
