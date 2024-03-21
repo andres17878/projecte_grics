@@ -111,6 +111,14 @@ ul li {
   .idioma, .logo, .dropdown-basic{
       margin: 1em 0; 
   }
+  .dropdown-basic{
+    margin-top: -0.4em;
+    margin-bottom: -0.4em;
+  }
+  .custom-dropdown {
+    margin-bottom: 1em;
+  } 
+
 
 }
 @media only screen and (max-width: 786px) {
