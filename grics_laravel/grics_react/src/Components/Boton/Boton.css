@@ -3,15 +3,16 @@
   }
   
   .boton {
-    padding: 10px 20px;
-    background-color: #007bff;
-    color: #fff;
+    padding: 10px 40px;
+    background-color: #ffffff;
+    color: #000000;
     border: none;
-    border-radius: 3px;
+    border-radius: 20px;
     cursor: pointer;
   }
   
   .boton:hover {
-    background-color: #0056b3;
+    background-color: #1f8bf7;
+    color: white;
   }
   
