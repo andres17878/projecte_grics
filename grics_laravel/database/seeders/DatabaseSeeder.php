@@ -16,6 +16,7 @@ class DatabaseSeeder extends Seeder
         $this->call(AdminsSeeder::class);
         $this->call(PublicacionsSeeder::class);
         $this->call(MembresSeeder::class);
+        $this->call(LiniesSeeder::class);
         // \App\Models\User::factory()->create([
         //     'name' => 'Test User',
         //     'email' => 'test@example.com',
