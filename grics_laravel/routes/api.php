@@ -14,6 +14,9 @@ Route::get('prueba', function(Request $request){
     ]);
 });
 
+
+// Routes per a la taula membres i publicacions
+
 Route::get('allMembres', function(Request $request){
     $membres = \DB::table('membres')->get();
     return response() ->json($membres);
@@ -41,4 +44,17 @@ Route::get('allPublicacionsByMember/{id}', function(Request $request, $id){
     ->where('membres_publicacions.membre_id', $id)
     ->get();
     return response() ->json($publicacions);
+});
+
+
+// Routes per a la taula linies
+
+Route::get('linies/{id}', function(Request $request, $id){
+    $linies = \DB::table('linies')->where('id', $id)->first();
+    return response() ->json($linies);
+});
+
+Route::get('countLinies', function(Request $request){
+    $count = \DB::table('linies')->count();
+    return response() ->json($count);
 });
