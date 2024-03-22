@@ -1,0 +1,19 @@
+body{
+    font-family: "Roboto Condensed", sans-serif;
+    font-size: large;
+}
+.ContacteC{
+    /* padding: 10%; */
+    display: flex;
+}
+
+.mapUB{
+    padding-top: 10%;
+    padding-left: 10%;
+    width: 65%;
+    height: 50%;
+}
+.plusInfo{
+    padding-top: 5%;
+    padding-left: 2%;
+}
