@@ -22,7 +22,7 @@
 
 }
 
-.descripcio{
+.descripcio-home{
     display: flex;
     max-width: 100%;
     margin-left: 10%;
@@ -30,12 +30,12 @@
     margin-bottom: 2em;
     text-align: center;
 }
-.texto{
+.texto-home{
     margin-top: 3em;
     width: 90%;
     line-height: 1.5; 
 }
-.titulo{
+.titulo-home{
     margin-bottom: 2em;
 }
 .foto{
