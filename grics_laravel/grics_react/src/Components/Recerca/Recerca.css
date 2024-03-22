@@ -34,8 +34,26 @@
     margin-bottom: 2em;
 }
 
-.carLinias{
+.carousel-Linias{
     margin-top: 2em;
-    margin-left: 10%;
-    margin-right: 10%;
+    margin-left: 6%;
+    margin-right: 6%;
+}
+
+.linia-separacion{
+    width: 100%;
+    height: 0.1em;
+    background-color: black;
+}
+
+.titulo-projectes-investigacio{
+    color: black;
+    text-align: center;
+    margin-top: 3em;
+    margin-bottom: 3em;
+}
+
+.carousel-projectes{
+    margin-left: 6%;
+    margin-right: 6%;
 }
