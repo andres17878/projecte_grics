@@ -1,6 +1,7 @@
 import React from 'react'
 import './Recerca.css'
 import axios from 'axios';
+import { useState, useEffect } from 'react';
 
 export default function Contenido(props) {
     const [data, setData] = useState([]);
@@ -8,7 +9,7 @@ export default function Contenido(props) {
     const [error, setError] = useState(null);
 
     useEffect(() => {
-        axios.get(`http://localhost:8000/api/recerca/${props.id}`)
+        axios.get(`http://localhost:8000/api/linies/${props.id}`)
         .then((response) => {
             setData(response.data);
             setLoading(false);
@@ -20,13 +21,13 @@ export default function Contenido(props) {
     }, [props.id]);
 
     if (loading) return <p>Loading...</p>;
-    if (error) return <p>Error!</p>;
+    if (error) return <p>Error!2</p>;
 
   return (
     <div>
         <div className='Card-1'>
-            <img src={data.imgUrl} alt={data.alt}></img>
-            <h2>{data.texto}</h2>
+            <img src={data.foto} alt='prueba' className='foto-Card'></img>
+            <h4 className='descripcion-Card'>{data.descripcio}</h4>
         </div>
     </div>
   )
