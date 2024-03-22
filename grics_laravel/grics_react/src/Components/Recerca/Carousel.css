@@ -1,3 +1,6 @@
+/*
+    CSS CAROUSEL LINIES D'INVESTGACIO 
+*/
 .Card-1{
     color: black;
     width: 14.9em;
@@ -22,3 +25,30 @@
 .descripcion-Card{
     margin-top: 0.5em;
 }
+
+/*
+    CSS CAROUSEL PROJECTES D'INVESTIGACIÓ
+*/
+
+.Card-2{
+    color: black;
+    width: 26em;
+    height: 10em;
+    display: flex;
+
+}
+.Izquierda-Card-2{
+    width: 30%;
+    height: auto;
+}
+.Derecha-Card-2{
+    width: 50%;
+    height: auto;
+}
+
+.descripcion-Card{
+    display: flex;
+    align-items: center; 
+    height: 10em;}
+
+  
