@@ -1,7 +1,8 @@
 import './Recerca.css'
 import Menu from '../Navbar/Menu'
 import Footer from '../Footer/Footer'
-import CaruselLinias from '../Recerca/Carousel'
+import CaruselLinias from './Carousel-linies'
+import CaruselProjectes from './Carousel-projecte'
 
 
 export default function Recerca() {
@@ -15,12 +16,24 @@ export default function Recerca() {
                 <div className='line-2'></div>
 
             </div>
-            <div className='linias'>
-                <h2 className='titulo-Linias'>LÍNIES D'INVESTIGACIÓ</h2>
+            <div>
+                <div className='linias'>
+                    <h2 className='titulo-Linias'>LÍNIES D'INVESTIGACIÓ</h2>
+                </div>
+                <div className='carousel-Linias'>
+                    <CaruselLinias/>
+                </div>
             </div>
-            <div className='carLinias'>
-                <CaruselLinias/>
+            <div className='linia-separacion'></div>
+            <div>
+                <div>
+                    <h2 className='titulo-projectes-investigacio'>PROJECTES D'INVESTIGACIÓ</h2>
+                </div>
+                <div className='carousel-projectes'>
+                    <CaruselProjectes />
+                </div>
             </div>
+
             <Footer/>
         </div>
     )
