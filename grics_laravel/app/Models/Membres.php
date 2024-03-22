@@ -21,4 +21,15 @@ class Membres extends Model
     {
         return $this->belongsToMany(Linies::class, 'linies_membres');
     }
+
+    public function noticies(): BelongsToMany
+    {
+        return $this->belongsToMany(Linies::class, 'membres_noticies');
+    }
+
+    public function projectes(): BelongsToMany
+    {
+        return $this->belongsToMany(Projectes::class, 'membres_projectes');
+    }
+
 }
