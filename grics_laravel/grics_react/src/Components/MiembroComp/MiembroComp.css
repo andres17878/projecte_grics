@@ -28,6 +28,7 @@
 .miembros ul{
     list-style-type: none;
     margin: 50;
+    /* padding-bottom: 1%; */
     padding-right: 15em;
     display: flex;
     flex-direction: column;
@@ -37,6 +38,9 @@
     margin-bottom: 10px;
     font-size: 16px;
     cursor: pointer;
-    color:black  
+    color:black;
+    text-align: left;
 }
-
+ul{
+    padding:5%;
+}

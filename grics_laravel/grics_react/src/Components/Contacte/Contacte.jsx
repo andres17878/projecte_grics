@@ -17,24 +17,14 @@ export default function Contacte() {
                         <img className="mapUB" src={map} alt="foto_mapa" />
                     </div>
                     <div className='plusInfo'>
-                        <p>Direccion: ......</p><br/>
-                        <p>@ Correo : ..........</p><br/>
-                        <p>Telefono : ..........</p><br/>
+                        <p><span class="material-symbols-outlined"></span>
+                        <b>Direccion: </b>..........</p><br/>
+                        <p><b>@ Correo : </b>..........</p><br/>
+                        <p><b>Telefono : </b>..........</p><br/>
                     </div>
                 </div>
             </div>
-
-            {/* <div className='info'>
-                <div className="imgMap">
-                    <img className="mapUB" src={map} alt="foto_mapa" />
-                </div>
-                <div className='plusInfo'>
-                    <p>Direccion: ......</p><br/>
-                    <p>@ Correo : ..........</p><br/>
-                    <p>Telefono : ..........</p><br/>
-                </div>
-            </div> */}
-            
+            <br/>          
             
             <Footer/>
         </div>
