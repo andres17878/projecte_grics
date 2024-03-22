@@ -16,9 +16,9 @@ function HomePage() {
                     <img className="foto_principal" src={fotoPrincipal} alt="foto principal" />
                     <img className="logo_principal" src={logoPrincipal} alt="logo principal" />
                 </div>
-                <div className="descripcio">
-                    <div className="texto">
-                        <h1 className="titulo">GRUP DE RECERCA CONSOLIDAT</h1>
+                <div className="descripcio-home">
+                    <div className="texto-home">
+                        <h1 className="titulo-home">GRUP DE RECERCA CONSOLIDAT</h1>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
                             sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
                             Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut 
