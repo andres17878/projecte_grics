@@ -17,27 +17,7 @@ function Membre() {
             <div className='div1'>  
               <Comp_Membres/> 
             </div>
-            <div className='div2'>  
-              <Comp_Membres/> 
-            </div>
-            <div className='div3'>  
-              <Comp_Membres/> 
-            </div>
-            <div className='div4'>  
-              <Comp_Membres/> 
-            </div>
-            <div className='div5'>  
-              <Comp_Membres/> 
-            </div>
-            <div className='div6'>  
-              <Comp_Membres/> 
-            </div>
-            <div className='div7'>  
-              <Comp_Membres/> 
-            </div>
-            <div className='div8'>  
-              <Comp_Membres/> 
-            </div>
+            
           </div>
           
       </div>
