@@ -18,6 +18,7 @@ function Membre() {
               <Comp_Membres/> 
             </div>
             
+           
           </div>
           
       </div>
@@ -25,6 +26,7 @@ function Membre() {
     </div>
 
   )
+  
 }
 
 export default Membre
