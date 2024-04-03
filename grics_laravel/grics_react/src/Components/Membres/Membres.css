@@ -15,11 +15,15 @@
 
 .Membress{
     display: flex;
-    justify-content:space-around;
-    flex-wrap: wrap;
+    justify-content:space-around  ;
+    flex-wrap: wrap; 
     
 }
 
-[class^="div"] {
+
+[class^="miembros"] {
     padding: 1%;
+    display: flex;
+    /* flex-direction: row; */
+    
 }

@@ -26,7 +26,7 @@ function Comp_Membres(){
     return( 
         <div className='divMayor'>
             {data.map((miembro, index) => (
-                <div className="miembros" key={index}>
+                <div className= {"miembros"+index} key={index}>
                     <div className='portaImagen'>
                         <img src={miembro.foto || membreImg} alt="miembro" className="imgMiembro" />
                     </div>
