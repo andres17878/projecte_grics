@@ -4,6 +4,8 @@ import Footer from '../Footer/Footer'
 import { useState, useEffect } from 'react';
 import PublicacioCard from '../PublicacioCard/PublicacioCard'
 import axios from 'axios';
+import Pagination from '@mui/material/Pagination';
+import Stack from '@mui/material/Stack';
 
 export default function Publicacions() {
 
@@ -29,6 +31,9 @@ export default function Publicacions() {
     return (
         <div className="publicacions">
             <Menu/>
+
+            <Pagination count={count} color="primary" />
+            
 
             <div className="publicacions__container">
                 <div className="linia_publicacion"></div>

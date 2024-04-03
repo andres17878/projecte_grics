@@ -25,7 +25,7 @@ export default function PublicacioCard(props) {
     if (error) return <p>Error!</p>;
 
     return (
-        <div className="publicacioCard">
+        <div className="publicacioCard" id={props.id}>
             <div className="linia_negra_vertical"></div>
             <div className="publicacioCard_text">
                 <p>{data.cognom}. {data.nom}. {data.anyo}. {data.titol}.

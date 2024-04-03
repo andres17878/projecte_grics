@@ -5,12 +5,11 @@
     margin-right: 6em;
     margin-bottom: 7em;
     display: flex;
-    align-items: center; 
+    align-items: center;
 }
 
 .publicacions_items{
     height: 100vh;
-    overflow: hidden;
 }
 
 .linia_publicacion,
