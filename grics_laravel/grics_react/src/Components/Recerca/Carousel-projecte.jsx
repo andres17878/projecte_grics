@@ -9,7 +9,7 @@ import { useState, useEffect } from 'react';
 
 
 
-export default function prueba() {
+export default function CarouselProjecto() {
 
   const responsive = {
     superLargeDesktop: {
