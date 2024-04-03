@@ -7,24 +7,23 @@ import { useState, useEffect } from 'react';
 
 
 
-export default function prueba() {
+export default function CarouselLinies() {
 
   const responsive = {
     superLargeDesktop: {
-
-      breakpoint: { max: 5000, min: 4000 },
+      breakpoint: { max: 4000, min: 3000 },
       items: 5
     },
     desktop: {
-      breakpoint: { max: 4000, min: 1350 },
+      breakpoint: { max: 3000, min: 1024 },
       items: 3
     },
     tablet: {
-      breakpoint: { max: 1350, min: 900 },
+      breakpoint: { max: 1024, min: 464 },
       items: 2
     },
     mobile: {
-      breakpoint: { max: 900, min: 0 },
+      breakpoint: { max: 464, min: 0 },
       items: 1
     }
   };
@@ -52,7 +51,34 @@ export default function prueba() {
 
     return (
         <div >
-            <Carousel responsive={responsive} >
+            <Carousel responsive={responsive} 
+            additionalTransfrom={0}
+            arrows
+            autoPlay
+            autoPlaySpeed={3000}
+            centerMode={false}
+            className=""
+            containerClass="container-with-dots"
+            dotListClass=""
+            draggable
+            focusOnSelect={false}
+            infinite
+            itemClass=""
+            keyBoardControl
+            minimumTouchDrag={80}
+            pauseOnHover
+            renderArrowsWhenDisabled={false}
+            renderButtonGroupOutside
+            renderDotsOutside={false}
+            rewind={false}
+            rewindWithAnimation={false}
+            rtl={false}
+            shouldResetAutoplay
+            showDots={false}
+            sliderClass=""
+            slidesToSlide={1}
+            swipeable>
+
               {Array.from({ length: data }, (_, index) => (
                   <Contenido key={index} id={index + 1} />
               ))}
