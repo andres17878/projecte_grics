@@ -10,7 +10,7 @@ import CustomButtonGroup from './CustomButtonGroup';
 
 
 
-export default function CarouselLinies({ currentSlide }) {
+export default function CarouselLinies() {
 
   const responsive = {
     superLargeDesktop: {
@@ -54,27 +54,39 @@ export default function CarouselLinies({ currentSlide }) {
 
     return (
       <div className="carousel-container">
-      <Carousel
-        arrows={false}
-        responsive={responsive}
-        autoPlay
-        autoPlaySpeed={3000}
-        draggable
-        infinite
-        minimumTouchDrag={80}
-        pauseOnHover
-        slidesToSlide={1}
-        swipeable
-        selectedItem={currentSlide}
-        customButtonGroup={<CustomButtonGroup />} 
-        renderButtonGroupOutside={true} 
-      >
+        <Carousel
+          additionalTransfrom={0}
+          arrows={false}
+          autoPlaySpeed={3000}
+          centerMode={false}
+          className='carrusel'
+          customButtonGroup={<CustomButtonGroup/>}
+          renderButtonGroupOutside
+          dotListClass=""
+          focusOnSelect={false}
+          draggable={false}
+          swipeable={false}
+          infinite={false}
+          keyBoardControl
+          minimumTouchDrag={80}
+          pauseOnHover
+          renderArrowsWhenDisabled={false}
+          renderDotsOutside={false}
+          responsive={responsive}
+          rewind={false}
+          rewindWithAnimation={false}
+          rtl={false}
+          shouldResetAutoplay
+          showDots={false}
+          sliderClass=''
+          slidesToSlide={1}
+        >
+          {Array.from({ length: data }, (_, index) => (
+            <Contenido key={index} id={index + 1} />
+          ))}
 
-              {Array.from({ length: data }, (_, index) => (
-                  <Contenido key={index} id={index + 1} />
-              ))}
-
-            </Carousel>
-        </div>
-    )
+        </Carousel>
+      </div>
+    );
 }
+
