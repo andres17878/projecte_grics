@@ -30,12 +30,11 @@ function Comp_Membres(){
                     <div className='portaImagen'>
                         <img src={miembro.foto || membreImg} alt="miembro" className="imgMiembro" />
                     </div>
-                    <ul>
-                        <li id="li">Nom: {miembro.nom}</li>
-                        <li id="li">Cognom: {miembro.cognom}</li>
-                        <li id="li">Carrec: {miembro.carrec}</li>
-                        <li id="li">Linies de recerca: {miembro.email}</li>
-                       
+                    <ul className="info-list">
+                        <li><u>Nom: </u>{miembro.nom}</li>
+                        <li><u>Cognom: </u>{miembro.cognom}</li>
+                        <li><u>Carrec: </u>{miembro.carrec}</li>
+                        <li><u>Linies de recerca: </u>{miembro.email}</li>
                     </ul>
                 </div>
             ))}
