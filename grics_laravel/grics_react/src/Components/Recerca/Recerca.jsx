@@ -30,7 +30,7 @@ export default function Recerca() {
                 </div>
             </div>
             <div className='linia-separacion'></div>
-            <div>
+            <div className='projecto'>
                 <div>
                     <h2 className='titulo-projectes-investigacio'>PROJECTES &apos;INVESTIGACIÓ</h2>
                 </div>
