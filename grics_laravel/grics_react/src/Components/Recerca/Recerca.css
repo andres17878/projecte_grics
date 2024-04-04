@@ -34,13 +34,15 @@
     margin-bottom: 2em;
 }
 
-.carousel-Linias{
+.react-multi-carousel-list{
     margin-top: 2em;
     margin-left: 6%;
     margin-right: 6%;
+    margin-bottom: -20em;
 }
 
 .linia-separacion{
+    margin-top: 5em;
     width: 100%;
     height: 0.1em;
     background-color: black;
@@ -56,4 +58,56 @@
 .carousel-projectes{
     margin-left: 6%;
     margin-right: 6%;
+}
+
+.grupo_botones{
+    display: flex;
+    justify-content: space-between; 
+    margin-bottom: 15em;
+
+}
+
+.boton_atras{
+    margin-left: 2em;
+}
+.boton_adelante{
+    margin-right: 2em;
+}
+
+@media screen and (min-width: 3000px) {
+    .boton_atras {
+      margin-left: 4em;
+    }
+  
+    .boton_adelante {
+      margin-right: 4em;
+    }
+  }
+  
+  @media screen and (max-width: 3000px) and (min-width: 1024px) {
+    .boton_atras {
+      margin-left: 3em;
+    }
+  
+    .boton_adelante {
+      margin-right: 3em;
+    }
+  }
+  
+  @media screen and (max-width: 1024px) and (min-width: 464px) {
+    .boton_atras,
+    .boton_adelante {
+      margin: 0.5em;
+    }
+  }
+  
+  @media screen and (max-width: 464px) {
+    .boton_atras,
+    .boton_adelante {
+      margin: 0.2em;
+    }
+  }
+  
+  .projecto{
+    height: 25em;
 }
