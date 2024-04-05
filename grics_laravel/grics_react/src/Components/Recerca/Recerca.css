@@ -1,3 +1,7 @@
+/*
+    Titulo Página
+*/
+
 .titulo-recerca {
     margin-top: 5em;
     color: black;
@@ -27,6 +31,9 @@
 
 }
 
+/*
+    LINIAS DE INVESTIGACIÓN
+*/
 
 .titulo-Linias{
     text-align: center; 
@@ -39,26 +46,9 @@
     margin-left: 6%;
     margin-right: 6%;
     margin-bottom: -20em;
+
 }
 
-.linia-separacion{
-    margin-top: 5em;
-    width: 100%;
-    height: 0.1em;
-    background-color: black;
-}
-
-.titulo-projectes-investigacio{
-    color: black;
-    text-align: center;
-    margin-top: 3em;
-    margin-bottom: 3em;
-}
-
-.carousel-projectes{
-    margin-left: 6%;
-    margin-right: 6%;
-}
 
 .grupo_botones{
     display: flex;
@@ -107,6 +97,29 @@
       margin: 0.2em;
     }
   }
+
+/*
+    PROYECTOS
+*/
+
+.linia-separacion{
+    margin-top: 5em;
+    width: 100%;
+    height: 0.1em;
+    background-color: black;
+}
+
+.titulo-projectes-investigacio{
+    color: black;
+    text-align: center;
+    margin-top: 3em;
+    margin-bottom: 3em;
+}
+
+.carousel-projectes{
+    margin-left: 6%;
+    margin-right: 6%;
+}
   
   .projecto{
     height: 25em;
