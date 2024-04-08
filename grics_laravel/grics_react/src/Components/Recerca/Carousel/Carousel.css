@@ -1,0 +1,142 @@
+/*
+    CSS CAROUSEL LINIES D'INVESTGACIO 
+*/
+.Card-1 {
+    color: black;
+    width: 20em; 
+    height: 30em;
+
+  }
+  
+  .foto-Card {
+    width: 100%;
+    height: 15em;
+  }
+  
+  .react-multi-carousel-item {
+    margin: 0.1em;
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+  }
+  
+  
+  .descripcion-Card {
+    margin-top: 1.5em;
+    font-size: 1em;
+    text-align: center;
+  }
+  
+@media screen and (min-width: 3000px) {
+  .Card-1 {
+    width: 25em; 
+    height: 35em;
+  }
+
+  .foto-Card {
+    height: 17em;
+  }
+}
+
+@media screen and (max-width: 3000px) and (min-width: 1024px) {
+  .Card-1 {
+    width: 20em; 
+    height: 30em;
+  }
+
+  .foto-Card {
+    height: 15em;
+  }
+}
+
+@media screen and (max-width: 1024px) and (min-width: 464px) {
+  .Card-1 {
+    width: 15em; 
+    height: 25em;
+  }
+
+  .foto-Card {
+    height: 12em;
+  }
+}
+
+@media screen and (max-width: 464px) {
+  .Card-1 {
+    width: 12em; 
+    height: 20em;
+  }
+
+  .foto-Card {
+    height: 10em;
+  }
+}
+
+/*
+
+  Botones del Carousel 
+
+*/
+
+.estiloBotones{
+  border: 0px;
+  background-color: white;
+  
+}
+
+.flechasCarousel{
+  width: 2em;
+  height: 2em;
+}
+
+
+/*
+    CSS CAROUSEL PROJECTES D'INVESTIGACIÓ
+*/
+
+.Card-2{
+    color: black;
+    width: 26em;
+    height: 10em;
+    display: flex;
+
+}
+.Izquierda-Card-2{
+    width: 40%;
+    height: auto;
+}
+.Derecha-Card-2{
+    width: 50%;
+    height: auto;
+}
+
+
+  
+/*
+    CSS CAROUSEL CONTRACTES
+*/
+
+.Card-3{
+  color: black;
+  width: 100%;
+  height: 20em;
+  display: flex;
+  margin-left: 10%;
+  margin-right: 10%;
+
+}
+.Izquierda-Card-3{
+  width: 50%;
+  height: auto;
+}
+.Derecha-Card-3{
+  width: 30%;
+  height: auto;
+}
+
+.descripcion-Card-contractes{
+  display: flex;
+  margin-top: 1.5em;
+  font-size: 1em;
+  text-align: left;
+  height: 10em;
+}
