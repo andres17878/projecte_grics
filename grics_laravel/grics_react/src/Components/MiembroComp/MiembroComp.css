@@ -1,45 +1,43 @@
-/* Estilo para el componente "miembros" */
-.divMayor{
-    display: flex; 
+.divMayor {
+    display: flex;
     justify-content: center;
-    flex-wrap:wrap;
-    
-    
+    flex-wrap: wrap;
 }
 
 [class^="miembros"] {
-    width: 30em;
-    height: 15em;
-    display: flex; 
-    align-items:left;
-    justify-content: space-between; 
-    padding:1em;
+    width: 500px;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 20px;
     background-color: #ffffff;
-    border-radius: 15px; 
-    /* border: 2px solid rgb(0, 0, 0) ; */
-    margin:3em;
+    border-radius: 15px;
+    box-shadow: 4px 4px 8px #00265166;
+    margin: 20px;
 }
 
 .portaImagen {
-    max-width: 45%;
+    width: 45%;
+    border: 2px solid #000;
+    border-radius: 10px;
+    overflow: hidden;
 }
 
 .imgMiembro {
     width: 100%;
     height: 100%;
-    border-radius: 10%;
-    align-items: center; 
-}
-
-.info-list li{
-    list-style-type: none;
-    padding-right: 5em;
-    margin:8% ;
-    justify-content: space-between;     
-    flex-direction: row;
+    display: block;
 }
 
 .info-list {
+    list-style-type: none;
+    padding:2em;
+    margin-top: 10px;
+}
+
+.info-list li {
+    padding: 2%;
     font-size: 16px;
-    color:black;
+    color: black;
 }
