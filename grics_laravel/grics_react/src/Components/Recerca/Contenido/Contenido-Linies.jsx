@@ -1,8 +1,7 @@
 import React from 'react'
-import './Recerca.css'
+import '../Recerca.css'
 import axios from 'axios';
 import { useState, useEffect } from 'react';
-
 
 export default function Contenido(props) {
     const [data, setData] = useState([]);
@@ -26,13 +25,9 @@ export default function Contenido(props) {
 
   return (
     <div>
-        <div className='Card-2'>
-            <div className='Izquierda-Card-2'>
-                <img src={data.foto} alt='prueba' className='foto-Card'></img>
-            </div>
-            <div className='Derecha-Card-2'>
-                <h4 className='descripcion-Card'>{data.descripcio}</h4>
-            </div>
+        <div className='Card-1'>
+            <img src={data.foto} alt='prueba' className='foto-Card'></img>
+            <h4 className='descripcion-Card'>{data.descripcio}</h4>
         </div>
     </div>
   )

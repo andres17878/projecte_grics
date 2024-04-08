@@ -1,11 +1,11 @@
 import './Carousel.css'
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
-import Contenido from './Contenido-Linies';
+import Contenido from '../Contenido/Contenido-Linies';
 import axios from 'axios';
 import { useState, useEffect } from 'react';
 
-import CustomButtonGroup from './CustomButtonGroup'; 
+import CustomButtonGroup from '../Botones-Carousel/CustomButtonGroup-Linies'; 
 
 
 

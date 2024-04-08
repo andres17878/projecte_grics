@@ -64,6 +64,19 @@
     margin-right: 2em;
 }
 
+.grupo_botones_projecto{
+  display: flex;
+  justify-content: space-between; 
+  margin-top: 14em;
+
+}
+.grupo_botones_contractes{
+  display: flex;
+  justify-content: space-between; 
+  margin-top: 7em;
+
+}
+
 @media screen and (min-width: 3000px) {
     .boton_atras {
       margin-left: 4em;
@@ -117,10 +130,34 @@
 }
 
 .carousel-projectes{
-    margin-left: 6%;
-    margin-right: 6%;
+    margin-left: 4%;
+    margin-right: 4%;
 }
   
   .projecto{
-    height: 25em;
+    height: 20em;
+    margin-bottom: 7em;
+}
+
+/*
+
+CONTRACTES
+
+*/
+
+
+.titulo-contractes{
+  color: black;
+  text-align: center;
+  margin-top: 3em;
+  margin-bottom: 3em;
+}
+
+.carousel-contractes{
+  margin-left: 4%;
+  margin-right: 4%;
+}
+
+.contractes{
+  height: 30em;
 }

@@ -71,8 +71,22 @@
   }
 }
 
+/*
 
+  Botones del Carousel 
 
+*/
+
+.estiloBotones{
+  border: 0px;
+  background-color: white;
+  
+}
+
+.flechasCarousel{
+  width: 2em;
+  height: 2em;
+}
 
 
 /*
@@ -87,7 +101,7 @@
 
 }
 .Izquierda-Card-2{
-    width: 30%;
+    width: 40%;
     height: auto;
 }
 .Derecha-Card-2{
@@ -95,9 +109,34 @@
     height: auto;
 }
 
-.descripcion-Card-2{
-    display: flex;
-    align-items: center; 
-    height: 10em;}
 
   
+/*
+    CSS CAROUSEL CONTRACTES
+*/
+
+.Card-3{
+  color: black;
+  width: 100%;
+  height: 20em;
+  display: flex;
+  margin-left: 10%;
+  margin-right: 10%;
+
+}
+.Izquierda-Card-3{
+  width: 50%;
+  height: auto;
+}
+.Derecha-Card-3{
+  width: 30%;
+  height: auto;
+}
+
+.descripcion-Card-contractes{
+  display: flex;
+  margin-top: 1.5em;
+  font-size: 1em;
+  text-align: left;
+  height: 10em;
+}

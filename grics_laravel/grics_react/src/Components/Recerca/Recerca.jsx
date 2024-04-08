@@ -1,8 +1,9 @@
 import './Recerca.css'
 import Menu from '../Navbar/Menu'
 import Footer from '../Footer/Footer'
-import CaruselLinias from './Carousel-linies'
-import CaruselProjectes from './Carousel-projecte'
+import CaruselLinias from './Carousel/Carousel-linies'
+import CaruselProjectes from './Carousel/Carousel-projecte'
+import CarouselContractes from './Carousel/Carousel-contractes'
 // import { useState, useEffect } from 'react';
 
 
@@ -25,7 +26,7 @@ export default function Recerca() {
                 </div>
                 <div>
                     <div className='carousel-Linias'>
-                        <CaruselLinias slides={10} /> 
+                        <CaruselLinias /> 
                     </div>
                 </div>
             </div>
@@ -38,6 +39,17 @@ export default function Recerca() {
                     <CaruselProjectes />
                 </div>
             </div>
+            <div className='linia-separacion'></div>
+            <div className='contractes'>
+                <div>
+                    <h2 className='titulo-contractes'>CONTRACTES</h2>
+                </div>
+                <div className='carousel-contractes'>
+                    <CarouselContractes />
+                </div>
+            </div>
+            
+
 
             <Footer/>
         </div>

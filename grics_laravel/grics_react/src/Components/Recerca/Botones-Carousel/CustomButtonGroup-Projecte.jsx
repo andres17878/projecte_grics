@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
 import {FiChevronLeft, FiChevronRight} from 'react-icons/fi';
+import '../Carousel/Carousel.css';
 
 const CustomNavigationButtons = ({ next, previous, ...rest}) => {
   const {
@@ -7,20 +8,20 @@ const CustomNavigationButtons = ({ next, previous, ...rest}) => {
   } = rest;
   
   return(
-    <div className="grupo_botones">
+    <div className="grupo_botones_projecto">
 
       <div className="boton_atras">
-        <button onClick={() => previous()}>
+        <button className="estiloBotones" onClick={() => previous()}>
           {" "}
-          <FiChevronLeft />
+          <FiChevronLeft className='flechasCarousel' />
         </button>
       </div>
 
       <div className="boton_adelante">
 
-        <button onClick={() => next()}>
+        <button className="estiloBotones" onClick={() => next()}>
           {" "}
-          <FiChevronRight />
+          <FiChevronRight className='flechasCarousel'/>
         </button>
 
       </div>
