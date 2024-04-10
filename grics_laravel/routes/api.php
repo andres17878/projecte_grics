@@ -58,3 +58,22 @@ Route::get('countLinies', function(Request $request){
     $count = \DB::table('linies')->count();
     return response() ->json($count);
 });
+
+
+
+// Routes per a la taula noticies
+
+Route::get('allNoticies', function(Request $request){
+    $noticies = \DB::table('noticies')->get();
+    return response() ->json($noticies);
+});
+
+Route::get('noticies/{id}', function(Request $request, $id){
+    $noticies = \DB::table('noticies')->where('id', $id)->first();
+    return response() ->json($noticies);
+});
+
+Route::get('countNoticies', function(Request $request){
+    $count = \DB::table('noticies')->count();
+    return response() ->json($count);
+});
