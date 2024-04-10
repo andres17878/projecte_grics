@@ -2,6 +2,7 @@ import './Noticia.css';
 import axios from 'axios';
 import { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 
 export default function Noticia(props) {
   const [data, setData] = useState({});
@@ -29,7 +30,8 @@ export default function Noticia(props) {
       <div className="contenido-noticia">
         <p className='titol'>{data.titol}</p>
         <p className='texto'>{data.descripcio}</p>
-        <a href={data.enlace} className="leer-mas">Llegir més</a>
+        <Link to={`/noticia/${data.id}`} className="leer-mas">Llegir mes</Link>
+
       </div>
     </div>
   );

@@ -12,6 +12,9 @@ import Publicacions from './Components/Publicacions/Publicacions';
 import Actualitat from './Components/Actualitat/Actualitat';
 import Contacte from './Components/Contacte/Contacte';
 
+import NoticiaGran from './Components/NoticiaGran/NoticiaGran';
+
+
 
 const router = createBrowserRouter([
   {
@@ -37,6 +40,16 @@ const router = createBrowserRouter([
   {
     path: '/contacte',
     element: <Contacte />,
+  },
+
+
+
+
+
+
+  {
+    path: '/noticia/:id',
+    element: <NoticiaGran  />,
   },
 ]);
 
