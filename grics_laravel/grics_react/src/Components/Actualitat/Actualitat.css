@@ -1,0 +1,70 @@
+.publicacions__container {
+    margin-top: 5em;
+    color: black;
+    margin-left: 6em;
+    margin-right: 6em;
+    margin-bottom: 7em;
+    display: flex;
+    align-items: center;
+}
+
+.publicacions_items{
+    height: auto;
+    overflow: auto;
+}
+
+.publicacions_root{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+
+.linia_publicacion,
+.linia_publicacion2 {
+    height: 1px;
+    background: black;
+    flex-grow: 1; 
+}
+
+.linia_publicacion {
+    margin-right: 3em;
+    margin-bottom: 0.4em;
+    
+}
+
+.linia_publicacion2 {
+    margin-left: 3em; 
+    margin-bottom: 0.4em;
+
+}
+
+.boto_publicacions{
+    width: 1.6em;
+    height: 1.6em;
+    margin: 0.5em;
+    background: #002651;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    font-size: 1em;
+    font-weight: bold;
+    cursor: pointer;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.boto_publicacions:disabled{
+    background-color: #BD2043;
+}
+
+.boto_publicacions:not(:disabled):hover{
+    background-color: #004B87;
+}
+
+.botons_paginacio_publicacions{
+    display: flex;
+    justify-content: center;
+    margin-top: 1em;
+}
