@@ -1,5 +1,6 @@
 import './MiembroComp.css';
 import personaEquipo from '../../assets/membre/avatar.png';
+import personalCV from '../../assets/CV/CV.pdf';
 import axios from 'axios';
 import { useState, useEffect } from 'react';
 
@@ -34,8 +35,8 @@ function Comp_Membres(){
                         <li><u>Nom: </u>{miembro.nom}</li>
                         <li><u>Cognom: </u>{miembro.cognom}</li>
                         <li><u>Carrec: </u>{miembro.carrec}</li>
-                        <li><u>Linies de recerca: </u>
-                        {miembro.email}</li>
+                        <li><u>Linies de recerca: </u>{miembro.email}</li>
+                        <li><a href={personalCV} target="_blank" rel="noopener noreferrer">Visualiza CV</a>: </li>
                     </ul>
                 </div>
             ))}
