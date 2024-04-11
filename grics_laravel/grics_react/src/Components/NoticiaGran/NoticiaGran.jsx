@@ -30,9 +30,9 @@ export default function NoticiaGran() {
     
     <div className="noticia-gran">
       <h1>{data.titol}</h1>
+      <p>{data.data}</p>
       <img src={data.foto} alt={data.titol} />
       <p>{data.descripcio}</p>
-      <p>{data.data}</p>
     </div>
   );
 }
