@@ -1,0 +1,32 @@
+/* NoticiaGran.css */
+
+.noticia-gran {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .noticia-gran h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .noticia-gran img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+  }
+  
+  .noticia-gran p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 10px;
+  }
+  
+  .noticia-gran p:last-child {
+    margin-bottom: 0;
+  }
+  
