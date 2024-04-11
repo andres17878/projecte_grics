@@ -23,11 +23,13 @@
   font-weight: regular;
   font-size: 21px;
   margin-bottom: 10px; /* Add margin between title and text */
+  align-self: flex-start;
 }
 
 .texto {
   color: #666;
   opacity: 0.85;
+  text-align: left;
 }
 
 .leer-mas {
