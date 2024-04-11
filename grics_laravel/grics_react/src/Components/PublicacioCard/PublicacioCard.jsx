@@ -25,13 +25,15 @@ export default function PublicacioCard(props) {
     if (error) return <p>Error!</p>;
 
     return (
-        <div className="publicacioCard" id={props.id}>
-            <div className="linia_negra_vertical"></div>
-            <div className="publicacioCard_text">
-                <p>{data.cognom}. {data.nom}. {data.anyo}. {data.titol}.
-                 {data.revista}. {data.volum}. {data.resum}. {data.data}.</p>
+        <a href={data.link} target="_blank" rel="noreferrer"  id={props.id} className="link_publicacio">
+            <div className="publicacioCard" id={props.id}>
+                <div className="linia_negra_vertical"></div>
+                <div className="publicacioCard_text">
+                    <p>{data.cognom}. {data.nom}. {data.anyo}. {data.titol}.
+                    {data.revista}. {data.volum}. {data.resum}. {data.data}.</p>
+                </div>
             </div>
-        </div>
+        </a>
                 
             
     );
