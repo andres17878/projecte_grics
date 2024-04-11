@@ -59,6 +59,10 @@ Route::get('countLinies', function(Request $request){
     return response() ->json($count);
 });
 
+Route::get('projectes/{id}', function(Request $request, $id){
+    $projectes = \DB::table('projectes')->where('id', $id)->first();
+    return response() ->json($projectes);
+});
 
 
 // Routes per a la taula noticies
