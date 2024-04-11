@@ -11,6 +11,7 @@ import Recerca from './Components/Recerca/Recerca';
 import Publicacions from './Components/Publicacions/Publicacions';
 import Actualitat from './Components/Actualitat/Actualitat';
 import Contacte from './Components/Contacte/Contacte';
+import Projecte from './Components/ProyecteEspecific/ProyecteEspecific';
 
 
 const router = createBrowserRouter([
@@ -38,6 +39,11 @@ const router = createBrowserRouter([
     path: '/contacte',
     element: <Contacte />,
   },
+  {
+    path: '/projecte',
+    element: <Projecte />,
+  },
+  
 ]);
 
 ReactDOM.createRoot(document.getElementById('root')).render(
