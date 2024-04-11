@@ -58,3 +58,30 @@ Route::get('countLinies', function(Request $request){
     $count = \DB::table('linies')->count();
     return response() ->json($count);
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Route::get('projectes/{id}', function(Request $request, $id){
+    $projectes = \DB::table('projectes')->where('id', $id)->first();
+    return response() ->json($projectes);
+});
