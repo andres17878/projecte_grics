@@ -1,25 +1,76 @@
 import './Actualitat.css'
 import Menu from '../Navbar/Menu'
 import Footer from '../Footer/Footer'
-import Noticia from '../Noticia/Noticia'
+import { useState, useEffect } from 'react';
+import Noticia from '../Noticia/Noticia.jsx';
+import axios from 'axios';
 
-export default function Actualitat() {
+export default function Publicacions() {
+
+    const [count, setData] = useState([]);
+    const [loading, setLoading] = useState(true);
+    const [error, setError] = useState(null);
+
+    const[currentPage, setCurrentPage] = useState(1);
+    const itemsPerPage = 10;
+
+    const indexOfLastItem = currentPage * itemsPerPage;
+    const indexOfFirstItem = indexOfLastItem - itemsPerPage;
+
+    
+    
+
+    useEffect(() => {
+        axios.get(`http://localhost:8000/api/countNoticies`)
+        .then((response) => {
+            setData(response.data);
+            setLoading(false);
+        })
+        .catch((error) => {
+            setError(error);
+            setLoading(false);
+        });
+    }, []);
+
+    if (loading) return <p>Loading...</p>;
+    if (error) return <p>Error en componente principal</p>;
+
+    const totalPages = Math.ceil(count / itemsPerPage);
+
+    const pageButtons = Array.from({ length: totalPages }, (_, index) => (
+        <button 
+            className='boto_publicacions'
+            key={index + 1} 
+            onClick={() => setCurrentPage(index + 1)}
+            disabled={currentPage === index + 1}
+        >
+            {index + 1}
+        </button>
+    ));
+
+    const currentItems = Array.from({ length: count }, (_, index) => index + 1)
+    .slice(indexOfFirstItem, indexOfLastItem)
+    .map((id) => <Noticia key={id} id={id} />);
+
     return (
-        <div className="actualitat">
+        <div className="publicacions">
             <Menu/>
-            <div className='titulo'>
-                <div className='line-1'></div>
-                <h1 className='pppp'>Actualitat</h1>
-                <div className='line-2'></div>
 
+            <div className="publicacions_root">
+                <div className="publicacions__container">
+                    <div className="linia_publicacion"></div>
+                        <h1 className="publicacions__titulo">Actualitat</h1>
+                    <div className="linia_publicacion2"></div>
+                </div>
+
+                <div className="publicacions_items">
+                    {currentItems}
+                </div>
+
+                <div className="botons_paginacio_publicacions">
+                    {pageButtons}
+                </div>
             </div>
-            <div className='linias'>
-            </div>
-            <div className='carousel-Linias'></div>
-                <Noticia/>
-                <Noticia/>
-                <Noticia/>
-                <Noticia/>
             <Footer/>
         </div>
     )

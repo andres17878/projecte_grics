@@ -11,6 +11,9 @@ import Recerca from './Components/Recerca/Recerca';
 import Publicacions from './Components/Publicacions/Publicacions';
 import Actualitat from './Components/Actualitat/Actualitat';
 import Contacte from './Components/Contacte/Contacte';
+
+import NoticiaGran from './Components/NoticiaGran/NoticiaGran';
+
 import Projecte from './Components/ProyecteEspecific/ProyecteEspecific';
 
 
@@ -38,6 +41,16 @@ const router = createBrowserRouter([
   {
     path: '/contacte',
     element: <Contacte />,
+  },
+
+
+
+
+
+
+  {
+    path: '/noticia/:id',
+    element: <NoticiaGran  />,
   },
   {
     path: '/projecte',

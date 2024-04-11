@@ -1,21 +1,42 @@
 import './Noticia.css';
-import foto from '../../assets/fotoBarcelona.webp';
+import axios from 'axios';
+import { useState, useEffect } from 'react';
+import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 
-function Noticia() {
-  const titulo = "Títol de la noticia";
-  const text = "Això és un text de mostra per a les noticies de la pàgina web de GRICS."
-  const enlace = "https://tu-enlace.com"; 
+export default function Noticia(props) {
+  const [data, setData] = useState({});
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
+
+  useEffect(() => {
+    axios.get(`http://localhost:8000/api/noticies/${props.id}`)
+      .then((response) => {
+        setData(response.data);
+        setLoading(false);
+      })
+      .catch((error) => {
+        setError(error);
+        setLoading(false);
+      });
+  }, [props.id]);
+
+  if (loading) return <p>Loading...</p>;
+  if (error) return <p>Error!</p>;
 
   return (
     <div className="contenedor-noticia">
-      <img src={foto} alt={titulo} className="imagen-noticia" />
+      <img src={data.foto} alt={data.titol} className="imagen-noticia" />
       <div className="contenido-noticia">
-        <p className='titol'>{titulo}</p>
-        <p className='texto'>{text}</p>
-        <a href={enlace} className="leer-mas">Llegir més</a>
+        <p className='titol'>{data.titol}</p>
+        <p className='texto'>{data.descripcio}</p>
+        <Link to={`/noticia/${data.id}`} className="leer-mas">Llegir mes</Link>
+
       </div>
     </div>
   );
 }
 
-export default Noticia;
+Noticia.propTypes = {
+  id: PropTypes.number
+};
