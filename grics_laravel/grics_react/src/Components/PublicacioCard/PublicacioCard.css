@@ -12,3 +12,13 @@
     margin-bottom: 0.4em;
     max-height: fit-content;
 }
+
+.link_publicacio{
+    text-decoration: none;
+    color: black;
+    font-weight:500;
+}
+
+.link_publicacio:hover{
+    text-decoration: none;
+}
