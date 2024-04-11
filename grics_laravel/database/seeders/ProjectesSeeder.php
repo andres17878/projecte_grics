@@ -23,6 +23,7 @@ class ProjectesSeeder extends Seeder
                 'resultats' => $faker->text,
                 'logos_entitats' => $faker->imageUrl,
                 'data' => $faker->date,
+                'integrants' => $faker->name,
             ]);
         }
 

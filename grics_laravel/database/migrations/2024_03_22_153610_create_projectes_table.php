@@ -20,6 +20,7 @@ return new class extends Migration
             $table->string('resultats');
             $table->string('logos_entitats');
             $table->string('data');
+            $table->string('integrants');
         });
     }
 
