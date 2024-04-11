@@ -27,7 +27,7 @@ export default function Contenido(props) {
 
   return (
     <div>
-        <Proyecto to={{pathname: "/projecte", state: {id: props.id}}}>
+        <Proyecto to={`/projecte/${data.id}`}>
             <div className='Card-2'>
                 <div className='Izquierda-Card-2'>
                     <img src={data.foto} alt='prueba' className='foto-Card'></img>

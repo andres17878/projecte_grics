@@ -45,15 +45,12 @@ const router = createBrowserRouter([
 
 
 
-
-
-
   {
     path: '/noticia/:id',
     element: <NoticiaGran  />,
   },
   {
-    path: '/projecte',
+    path: '/projecte/:id',
     element: <Projecte />,
   },
   

@@ -1,36 +1,57 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import { useLocation } from 'react-router-dom'; 
+import { useParams } from "react-router-dom";
+import Menu from '../Navbar/Menu';
+import './Proyecte-Especific.css';
 
-const ProyecteEspecific = (props) => {
-    const location = useLocation();
-    const [data, setData] = useState([]);
+export default function ProyecteEspecific() {
+    const [data, setData] = useState({});
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
-
+  
+    const {id} = useParams();
+  
     useEffect(() => {
-        const projectID = props.id;
-        axios.get(`http://localhost:8000/api/projectes/${projectID}`)
+      axios.get(`http://localhost:8000/api/projectes/${id}`)
         .then((response) => {
-            setData(response.data);
-            setLoading(false);
+          setData(response.data);
+          setLoading(false);
         })
         .catch((error) => {
-            setError(error);
-            setLoading(false);
+          setError(error);
+          setLoading(false);
         });
-    }, [props.id]);
-
+    },);
+  
     if (loading) return <p>Loading...</p>;
-    if (error) return <p>Error!2</p>;
-    
+    if (error) return <p>Error!</p>;
     return (
-        <div>
-            <h1>Prueba</h1>
-            {console.log(data.id)}
-            <p>Variable recibida: {data.id}</p>
-        </div>
-    )
-}
+      
+      <div className='projecte-especific'>
+        <Menu />
+        <div className='titul-projecte-especific'>
+                <div className='line-1'></div>
+                <h1>Projecte {data.titol}</h1>
+                <div className='line-2'></div>
+            </div>
 
-export default ProyecteEspecific
+        <div className='imagen-resumen-projecte'>
+            <div className='imagen-projecte-unic'>
+                <img src={data.foto} alt={data.titol} />
+            </div>
+            <div className='info-projecte'>
+                <ul>
+                    <li>Titol: {data.titol}</li>
+                    <li>DATA: {data.data}</li>
+                    <li>Integrants:</li>
+                    <li>Resum: {data.resum}</li>
+                    <li>Entitat/s: {data.entitats}</li>
+                </ul>
+            </div>
+            
+
+        </div>
+      </div>
+    );
+  }
+
