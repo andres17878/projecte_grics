@@ -52,6 +52,9 @@
     list-style: none;
     text-align: center;
     display: flex;
+    margin-top: 1em;
+    margin-right: 14em;
+
 }
 
 .enlaces li {
@@ -64,46 +67,6 @@
 .menu li {
     margin: 0 2em; 
 }
-.enlaces{
-  margin-top: 1em;
-}
-.custom-dropdown {
-  background-color: transparent; 
-  color: white; 
-  margin-right: 2em;
-  border: 3px solid white; 
-  border-radius: 1.5em;
-
-}
-
-.custom-dropdown .dropdown-toggle {
-  background-color: transparent !important; 
-  color: white;
-  border: none !important; 
-
-}
-.dropdown-basic{
-  margin-top: -0.2em;
-  margin-bottom: -0.2em;
-}
-.iconoMundo{
-  margin-right: 1em;
-  margin-left: -0.5em;
-}
-
-.custom-dropdown .dropdown-menu {
-  background-color: #002651; 
-  border: 2px solid white; 
-}
-
-.custom-dropdown .dropdown-item {
-  color: white; 
-}
-
-.custom-dropdown .dropdown-item:hover {
-  background-color: #004080; 
-}
-
 
 
 @media only screen and (max-width: 1150px) {
@@ -111,16 +74,9 @@
       flex-direction: column; 
   }
   
-  .idioma, .logo, .dropdown-basic{
+  .idioma, .logo{
       margin: 1em 0; 
   }
-  .dropdown-basic{
-    margin-top: -0.4em;
-    margin-bottom: -0.4em;
-  }
-  .custom-dropdown {
-    margin-bottom: 1em;
-  } 
 
 
 }
@@ -129,7 +85,7 @@
       flex-direction: column; 
   }
   
-  .idioma, .logo, .toggle-lang {
+  .idioma, .logo{
       margin: 1em 0; 
   }
 
