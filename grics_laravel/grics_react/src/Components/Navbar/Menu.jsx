@@ -20,16 +20,7 @@ function Menu(){
                 <li> <Link to="/actualitat">Actualitat</Link></li>
                 <li> <Link to="/contacte">Contacte</Link></li>
             </ul>
-            <Dropdown className="custom-dropdown">
-            <Dropdown.Toggle variant="success" className="dropdown-basic">
-                <img src={lang} alt="Icono idiomas" className='iconoMundo' />
-            </Dropdown.Toggle>
-            <Dropdown.Menu>
-                <Dropdown.Item href="#/action-1">Castellano</Dropdown.Item>
-                <Dropdown.Item href="#/action-2">Català</Dropdown.Item>
-                <Dropdown.Item href="#/action-3">English</Dropdown.Item>
-            </Dropdown.Menu>
-        </Dropdown>
+
 
             
         </div>
