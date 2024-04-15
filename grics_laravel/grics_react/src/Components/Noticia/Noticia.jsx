@@ -28,7 +28,7 @@ export default function Noticia(props) {
     <div className="contenedor-noticia">
       <img src={data.foto} alt={data.titol} className="imagen-noticia" />
       <div className="contenido-noticia">
-        <p className='titol'>{data.titol}</p>
+        <Link to={`/noticia/${data.id}`} className="titol">{data.titol}</Link>
         <p className='texto'>{data.descripcio}</p>
         <Link to={`/noticia/${data.id}`} className="leer-mas">Llegir mes</Link>
 
