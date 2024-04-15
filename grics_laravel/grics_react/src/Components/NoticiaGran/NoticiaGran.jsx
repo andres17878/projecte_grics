@@ -5,7 +5,6 @@ import './NoticiaGran.css';
 import { Link, useParams } from "react-router-dom";
 import Menu from '../Navbar/Menu'
 import Footer from '../Footer/Footer'
-import iconoEndarrere from '../../assets/fletxa_enrere/fletxa.png'
 
 
 export default function NoticiaGran() {
