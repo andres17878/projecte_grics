@@ -86,12 +86,13 @@ Route::get('countNoticies', function(Request $request){
 
 // Login
 
-Route::middleware('auth:sanctum')->get('/admin', function(Request $request){
-    return $request->admin();
+Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
+    return $request->user();
 });
 
 Route::controller(AuthController::class)->group(function(){
-    Route::post('login', 'login');
-    Route::get('userdetail', 'userDetails');
+    Route::post('register','register');
+    Route::post('login','login');
+    Route::get('usetdetail','userDetails');
 });
 
