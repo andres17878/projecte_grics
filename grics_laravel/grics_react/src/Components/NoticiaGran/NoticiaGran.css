@@ -14,9 +14,11 @@
     text-align: center;
   }
 
-  .endarrere {
-    font-size: 18px;
-    color: black;
+  .go_Back {
+    max-width: 100%;
+    position: relative;
+    top: 3em;
+    margin-left: 6em;
   }
 
   .data {
