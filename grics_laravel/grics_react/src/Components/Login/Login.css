@@ -1,0 +1,81 @@
+.mainLoginContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+}
+
+.formContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+    height: 70%;
+    border-radius: 20px;
+    background-color: #002651;
+    color: white;
+
+}
+
+.inputContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+.goBackContainer{
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 10px;
+    width: 20%;
+    height: 10%;
+}
+
+.titleText{
+    display: flex;
+    font-size: 4em;
+    margin: 1em;
+}
+
+.inputLogin{
+    display: flex;
+    width: 80%;
+    margin: 1em;
+    padding: 1em;
+    border-radius: 10px;
+    border: none;
+}
+
+.formLogin{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.buttonLogin{
+    display: flex;
+    width: 10%;
+    margin: 1em;
+    padding: 1em;
+    border-radius: 10px;
+    border: none;
+    color: black;
+    font-size: 0.9em;
+    justify-content: center;
+    font-size: 1em;
+}
+
+.buttonLogin:hover{
+    background-color: #BD2043;
+    color: white;
+    
+}

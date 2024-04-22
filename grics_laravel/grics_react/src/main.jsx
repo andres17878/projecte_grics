@@ -15,6 +15,8 @@ import Contacte from './Components/Contacte/Contacte';
 import NoticiaGran from './Components/NoticiaGran/NoticiaGran';
 
 import Projecte from './Components/ProyecteEspecific/ProyecteEspecific';
+import Login from './Components/Login/Login';
+import Dashboard from './Components/Login/Dashboard';
 
 
 const router = createBrowserRouter([
@@ -52,6 +54,14 @@ const router = createBrowserRouter([
   {
     path: '/projecte/:id',
     element: <Projecte />,
+  },
+  {
+    path: '/login',
+    element: <Login/>,
+  },
+  {
+    path: '/dashboard',
+    element: <Dashboard/>,
   },
   
 ]);
