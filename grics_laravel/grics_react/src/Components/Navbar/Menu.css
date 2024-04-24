@@ -12,10 +12,6 @@
     font-size: medium;
 }
 
-.idioma {
-    margin-right: 3%; 
-}
-
 .logo {
     width: 7em;
     height:4em;
@@ -53,7 +49,7 @@
     text-align: center;
     display: flex;
     margin-top: 1em;
-    margin-right: 14em;
+    margin-right: 10%;
 
 }
 
