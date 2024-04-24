@@ -25,8 +25,7 @@ function Miembro({ miembro, isHovered }) {
                 <li className="descripcion-li">
                     <u>Descripción: </u>
                     <span className="descripcion-texto">
-                        {showFullDescription ? miembro.email : `${miembro.email.slice(0, 5)}...`}
-                        {/* cambiar el miembro.email por descripcion cuando se realice el cambio en la base de datos */}
+                        {showFullDescription ? miembro.info : `${miembro.info.slice(0, 5)}...`}
                     </span>
                     <button className='botonVistaContenido' onClick={toggleDescription}>
                         {showFullDescription ? 'Ver Menos' : 'Ver Más'}
