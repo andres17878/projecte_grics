@@ -2,10 +2,17 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import Swal from "sweetalert2";
 import { useNavigate } from "react-router-dom";
+import "./Dashboard.css";
+import DashboardCard from "./DashboardCard";
 
 const Dashboard = () => {
     const navigate = useNavigate();
     const [userDetails, setUserDetails] = useState("");
+
+    const [currentSection, setCurrentSection] = useState("Publicacions");
+    const handleSectionChange = (event) => {
+        setCurrentSection(event.target.value);
+    };
 
     useEffect(()=>{
         const fetchUserDetails = async () => {
@@ -41,25 +48,50 @@ const Dashboard = () => {
         fetchUserDetails();
     },[navigate])
     return(
-        <div className="container mt-4">
-            <div className="row justify-content-center">
-                <div className="col-md-6">
-                    <h3>Welcome To Dashboard</h3>
-                    {userDetails && (
-                        <div>
-                            <p>Email:{userDetails.email}</p>
-                        </div>
-                    )}
-                    <button className="btn btn-primary mt-4" onClick={()=> {
-                        localStorage.removeItem("token"); 
-                        navigate("/")}
-                    }>
-                        Logout
-                    </button>
+        <div className="dashboardContainer">
+            <div className="dashboardHeader">
+                <div className="dashboardTitle">
+                    <h1>{currentSection}</h1>
+                    <h2> {userDetails.email} </h2>
+            </div>
+
+            <div className="dashboardContent">
+                
+                <div className="dashboardSelect">
+                    <select
+                        value={currentSection}
+                        onChange={handleSectionChange}
+                        className="sectionSelect"
+                    >
+                        <option value="Publicacions">Publicacions</option>
+                        <option value="Membres">Membres</option>
+                        <option value="Línies">Línies</option>
+                        <option value="Projectes">Projectes</option>
+                        <option value="Contractes">Contractes</option>
+                        <option value="Actualitat">Actualitat</option>
+                    </select>
                 </div>
             </div>
+
+            <div className="dashboardCards">
+                <DashboardCard selectedOption={currentSection} />
+            </div>
+
+            <div className="logoutButton">
+                <button
+                    onClick={() => {
+                        localStorage.removeItem("token");
+                        navigate("/");
+                    }}
+                >
+                    Log out
+                </button>
+            </div>
+
         </div>
-    )
+    </div>
+    );
 }
 
 export default Dashboard;
+            

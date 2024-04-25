@@ -1,0 +1,51 @@
+.dashboardCard{
+    color: black;
+}
+
+.dashboardCardUl{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.divCardDash{
+    display: flex;
+    padding-top: 2em;
+    padding-left: 2em;
+    max-width: 80%;
+}
+
+.imgDashCard{
+    width: 10%;
+    height: auto;
+    padding-right: 20px;
+    margin-top: 1em;
+}
+
+.lineaDash{
+    width: 80%;
+    height: 1px;
+    background-color: #002651;
+    margin-top: 1em;
+}
+
+.cardContent {
+    display: flex;
+    align-items: center; 
+    justify-content: space-between; 
+    width: 100%; 
+}
+
+.itemCard{
+    margin-left: 1.5em;
+}
+
+.itemButtons{
+    margin-right: 1.5em;
+    display: flex;
+    flex-direction: column;
+}
+
+.updateButton, .deleteButton{
+    margin: 1em;
+}
