@@ -5,7 +5,6 @@ import './NoticiaGran.css';
 import { Link, useParams } from "react-router-dom";
 import Menu from '../Navbar/Menu'
 import Footer from '../Footer/Footer'
-import iconoEndarrere from '../../assets/fletxa_enrere/fletxa.png'
 
 
 export default function NoticiaGran() {
@@ -33,8 +32,10 @@ export default function NoticiaGran() {
     <div className='llegir-mes'>
       <Menu />
       <div className="noticia-gran">
+        <div className='go_Back'>
+          <Link to="/actualitat"> <img src='../src/assets/BACK/arrow_back.svg' alt='Atras' className='imagen-atras'></img></Link>
+        </div>
         <h1 className='titol'>{data.titol}</h1>
-        <Link to="/actualitat" className='endarrere'>Torna</Link>
         <p className='data'>Published {data.data}</p>
         <img className='imatge' src={data.foto} alt={data.titol} />
         <p className='descripcio'>{data.descripcio}</p>

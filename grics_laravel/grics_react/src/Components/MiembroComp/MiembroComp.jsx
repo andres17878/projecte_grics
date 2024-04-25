@@ -3,8 +3,10 @@ import personaEquipo from '../../assets/membre/avatar.png';
 import personalCV from '../../assets/CV/CV.pdf';
 import axios from 'axios';
 import { useState, useEffect } from 'react';
+import {createRoot} from 'react-dom';
 
 function Comp_Membres(){
+    const root = createRoot(document.getElementById('root'));
     const [data, setData] = useState([]);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
@@ -37,6 +39,8 @@ function Comp_Membres(){
                         <li><u>Carrec: </u>{miembro.carrec}</li>
                         <li><u>Linies de recerca: </u>{miembro.email}</li>
                         <li><a href={personalCV} target="_blank" rel="noopener noreferrer">Visualiza CV</a>: </li>
+                        <li className="descripcion-li"><u>Descripcion: </u><span className="descripcion-texto">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</span></li>
                     </ul>
                 </div>
             ))}
