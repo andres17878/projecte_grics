@@ -1,5 +1,5 @@
 .divMayor {
-    padding:1px;
+    /* padding:1px; */
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
@@ -14,7 +14,7 @@
     background-color: #ffffff;
     border-radius: 15px;
     box-shadow: 4px 4px 8px rgba(0, 38, 81, 0.4);
-    margin: 30px;
+    margin: 20px;
     font-size: small;
 }
 
@@ -73,4 +73,24 @@
     border: none;
     cursor: pointer;
     
+}
+@media (max-width: 900px) {
+    [class^="miembros"] {
+        flex-direction: column;
+        align-items: center;
+        width: 90%;
+        margin:20px
+    }
+
+    .portaImagen, .imgMiembro {
+        width: 100%;
+        height: auto;
+    }
+}
+
+/* Para pantallas pequeñas */
+@media (max-width: 600px) {
+    .info-list {
+        padding: 10px;
+    }
 }
