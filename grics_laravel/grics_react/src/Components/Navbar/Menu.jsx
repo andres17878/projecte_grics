@@ -1,4 +1,3 @@
-
 import './Menu.css';
 import logo from '../../assets/Logos/grics_logo_amplio.svg';
 import logoHover from '../../assets/Logos/grics_logo_amplio+blanco.svg';

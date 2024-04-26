@@ -32,7 +32,7 @@ export default function Recerca() {
             <div className='linia-separacion'></div>
             <div className='projecto'>
                 <div>
-                    <h2 className='titulo-projectes-investigacio'>PROJECTES &apos;INVESTIGACIÓ</h2>
+                    <h2 className='titulo-projectes-investigacio'>PROJECTES D&apos;INVESTIGACIÓ</h2>
                 </div>
                 <div className='carousel-projectes'>
                     <CaruselProjectes />
