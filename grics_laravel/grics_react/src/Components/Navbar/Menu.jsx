@@ -1,9 +1,6 @@
-import Dropdown from 'react-bootstrap/Dropdown';
-import 'bootstrap/dist/css/bootstrap.min.css'; 
 import './Menu.css';
 import logo from '../../assets/Logos/grics_logo_amplio.svg';
 import logoHover from '../../assets/Logos/grics_logo_amplio+blanco.svg';
-import lang from '../../assets/Home/idioma.svg';
 import { Link } from 'react-router-dom';
 
 function Menu(){
@@ -20,8 +17,6 @@ function Menu(){
                 <li> <Link to="/actualitat">Actualitat</Link></li>
                 <li> <Link to="/contacte">Contacte</Link></li>
             </ul>
-
-
             
         </div>
     );

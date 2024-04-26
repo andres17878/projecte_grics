@@ -1,4 +1,5 @@
 import styles from './Footer.module.css'; 
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
   return (
@@ -16,16 +17,18 @@ const Footer = () => {
 
           </div>
           <div className={styles["desenvolupat"]}>
-            <a href="https://github.com/andres17878/projecte_grics">Desenvolupat per alumnat d'Institut TIC de Barcelona</a> 
+            <a href="https://github.com/andres17878/projecte_grics">Desenvolupat per alumnat d&apos;Institut TIC de Barcelona</a> 
           </div>
           <ul className={styles["list-container"]}>
             <li><a href="https://google.com">Avís legal</a></li>
             <li><a href="https://google.com">Política de Privacitat</a></li>
-            <li><a href="https://google.com">Condicions d’ús</a></li>
+            <li><a href="https://google.com">Condicions d&apos;ús</a></li>
             <li><a href="https://google.com">Política de cookies</a></li>
           </ul>
           <div >
+            <Link to="/login">
                <img src='/src/assets/Home/login_logo.svg' alt='Login' className={styles.login}></img>
+            </Link>
           </div>
 
       </div>
