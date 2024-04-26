@@ -4,11 +4,12 @@ import Footer from "../Footer/Footer";
 import '../../index.css';
 import fotoPrincipal from '../../assets/Home/facultat1.gif'
 import logoPrincipal from '../../assets/Logos/grics_logo_amplio.svg'
+import MenuBurger from "../Navbar/MenuBureger";
 
 function HomePage() {
     return (
         <div className="home_page">
-            <Menu />
+            <MenuBurger />
 
 
             <div className="home_page_content">
@@ -19,7 +20,7 @@ function HomePage() {
                 <div className="descripcio-home">
                     <div className="texto-home">
                         <h1 className="titulo-home">GRUP DE RECERCA CONSOLIDAT</h1>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+                        <p className="contenido-home">Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
                             sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
                             Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut 
                             aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in 
