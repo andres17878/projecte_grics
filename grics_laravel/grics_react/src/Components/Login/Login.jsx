@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
 import BACK from "../../assets/BACK/arrow_back.svg";
 import { Link } from "react-router-dom";
+import "./Login.css";
 
 const Login = () =>{
     const navigate = useNavigate();
@@ -70,13 +71,14 @@ const Login = () =>{
             <div className="formContainer">
                 <form method="POST" onSubmit={handleSubmit}>
                     <div className="inputContainer">
-                        <input type="text" name="email" placeholder="Enter Email" className="form-control" onChange={handleChange} />
+                        <h1 className="titleText">Login</h1>
+                        <input type="text" name="email" placeholder="Email" className="form-control" onChange={handleChange} />
                             {validationErrors.email && <span className="text-danger">{validationErrors.email[0]}</span>}
                
-                        <input type="password" name="password" placeholder="Enter Password" className="form-control" onChange={handleChange} />
+                        <input type="password" name="password" placeholder="Password" className="form-control" onChange={handleChange} />
                             {validationErrors.password && <span className="text-danger">{validationErrors.password[0]}</span>}
                     </div>
-                    <button type="submit" className="btn btn-primary mt-4">Submit</button>
+                    <button type="submit" className="buttonLogin">Login</button>
                 </form>
             </div>
         </div>
