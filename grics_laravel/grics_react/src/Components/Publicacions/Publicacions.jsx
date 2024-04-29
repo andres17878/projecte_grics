@@ -51,6 +51,8 @@ export default function Publicacions() {
     const currentItems = Array.from({ length: count }, (_, index) => index + 1)
     .slice(indexOfFirstItem, indexOfLastItem)
     .map((id) => <PublicacioCard key={id} id={id} />);
+    
+    
 
     return (
         <div className="publicacions">

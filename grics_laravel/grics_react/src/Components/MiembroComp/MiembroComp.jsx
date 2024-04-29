@@ -3,10 +3,8 @@ import personaEquipo from '../../assets/membre/avatar.png';
 import personalCV from '../../assets/CV/CV.pdf';
 import axios from 'axios';
 import { useState, useEffect } from 'react';
-import {createRoot} from 'react-dom';
 
 function Comp_Membres(){
-    const root = createRoot(document.getElementById('root'));
     const [data, setData] = useState([]);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
