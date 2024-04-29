@@ -78,7 +78,9 @@ const Login = () =>{
                         <input type="password" name="password" placeholder="Password" className="form-control" onChange={handleChange} />
                             {validationErrors.password && <span className="text-danger">{validationErrors.password[0]}</span>}
                     </div>
+                    <div className="buttonLoginContainer">
                     <button type="submit" className="buttonLogin">Login</button>
+                    </div>
                 </form>
             </div>
         </div>
