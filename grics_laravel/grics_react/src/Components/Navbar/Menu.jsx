@@ -1,4 +1,3 @@
-import 'bootstrap/dist/css/bootstrap.min.css'; 
 import './Menu.css';
 import logo from '../../assets/Logos/grics_logo_amplio.svg';
 import logoHover from '../../assets/Logos/grics_logo_amplio+blanco.svg';
@@ -18,8 +17,6 @@ function Menu(){
                 <li> <Link to="/actualitat">Actualitat</Link></li>
                 <li> <Link to="/contacte">Contacte</Link></li>
             </ul>
-
-
             
         </div>
     );

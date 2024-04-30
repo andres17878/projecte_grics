@@ -1,8 +1,15 @@
 <?php
 
+use App\Http\Controllers\PublicacioController;
+use App\Http\Middleware\Authenticate;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\MembreController;
+use App\Http\Controllers\LiniaController;
+use App\Http\Controllers\NoticiaController;
+use App\Http\Controllers\ProjecteController;
+
 
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
@@ -50,6 +57,11 @@ Route::get('allPublicacionsByMember/{id}', function(Request $request, $id){
 
 // Routes per a la taula linies
 
+Route::get('allLinies', function(Request $request){
+    $linies = \DB::table('linies')->get();
+    return response() ->json($linies);
+});
+
 Route::get('linies/{id}', function(Request $request, $id){
     $linies = \DB::table('linies')->where('id', $id)->first();
     return response() ->json($linies);
@@ -83,11 +95,26 @@ Route::get('countNoticies', function(Request $request){
     return response() ->json($count);
 });
 
+// Routes per a la taula projectes
+Route::get('allProjectes', function(Request $request){
+    $projectes = \DB::table('projectes')->get();
+    return response() ->json($projectes);
+});
+
 
 // Login
 
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
+
+});
+
+Route::middleware(Authenticate::class)->group(function(){
+    Route::delete('Publicacions/{id}', [PublicacioController::class, 'destroy']);
+    Route::delete('Membres/{id}', [MembreController::class, 'destroy']);
+    Route::delete('Línies/{id}', [LiniaController::class, 'destroy']);
+    Route::delete('Actualitat/{id}', [NoticiaController::class, 'destroy']);
+    Route::delete('Projectes/{id}', [ProjecteController::class, 'destroy']);
 });
 
 Route::controller(AuthController::class)->group(function(){
@@ -95,4 +122,10 @@ Route::controller(AuthController::class)->group(function(){
     Route::post('login','login');
     Route::get('userdetail','userDetails');
 });
+
+
+
+
+
+
 
