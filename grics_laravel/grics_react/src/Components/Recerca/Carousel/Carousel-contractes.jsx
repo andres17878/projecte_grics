@@ -31,20 +31,29 @@ export default function CarouselProyecto() {
     }
   };
 
-  const [data, setData] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
+  const[ids, setIds] = useState([]);
+
+  const fetchIdsFromDatabase = async () => {
+    const response = await axios.get('http://localhost:8000/api/allIdLinies');
+    return response.data;
+  }
+
+
+
   useEffect(() => {
-      axios.get(`http://localhost:8000/api/countLinies`)
-      .then((response) => {
-          setData(response.data);
-          setLoading(false);
-      })
-      .catch((error) => {
-          setError(error);
-          setLoading(false);
-      });
+    fetchIdsFromDatabase()
+        .then(fetchedIds => {
+            setIds(fetchedIds);
+            setLoading(false);
+        })
+        .catch(error => {
+            console.error('Error fetching IDs:', error);
+            setError(error);
+            setLoading(false);
+        });
   }, []);
 
   if (loading) return <p>Loading...</p>;
@@ -81,8 +90,8 @@ export default function CarouselProyecto() {
           sliderClass=''
           slidesToSlide={1}
         >
-          {Array.from({ length: data }, (_, index) => (
-            <Contenido key={index} id={index + 1} />
+          {ids.map(id => (
+            <Contenido key={id.id} id={id.id} />
           ))}
 
         </Carousel>
