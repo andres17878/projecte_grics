@@ -30,6 +30,11 @@ Route::get('allMembres', function(Request $request){
     return response() ->json($membres);
 });
 
+Route::get('allIdPublicacions', function(Request $request){
+    $publicacions = \DB::table('publicacions')->select('id')->get();
+    return response() ->json($publicacions);
+});
+
 Route::get('allPublicacions', function(Request $request){
     $publicacions = \DB::table('publicacions')->get();
     return response() ->json($publicacions);
@@ -62,6 +67,11 @@ Route::get('allLinies', function(Request $request){
     return response() ->json($linies);
 });
 
+Route::get('allIdLinies', function(Request $request){
+    $linies = \DB::table('linies')->select('id')->get();
+    return response() ->json($linies);
+});
+
 Route::get('linies/{id}', function(Request $request, $id){
     $linies = \DB::table('linies')->where('id', $id)->first();
     return response() ->json($linies);
@@ -74,6 +84,11 @@ Route::get('countLinies', function(Request $request){
 
 Route::get('projectes/{id}', function(Request $request, $id){
     $projectes = \DB::table('projectes')->where('id', $id)->first();
+    return response() ->json($projectes);
+});
+
+Route::get('allIdProjectes', function(Request $request){
+    $projectes = \DB::table('projectes')->select('id')->get();
     return response() ->json($projectes);
 });
 
@@ -93,6 +108,11 @@ Route::get('noticies/{id}', function(Request $request, $id){
 Route::get('countNoticies', function(Request $request){
     $count = \DB::table('noticies')->count();
     return response() ->json($count);
+});
+
+Route::get('allIdNoticies', function(Request $request){
+    $noticies = \DB::table('noticies')->select('id')->get();
+    return response() ->json($noticies);
 });
 
 // Routes per a la taula projectes
