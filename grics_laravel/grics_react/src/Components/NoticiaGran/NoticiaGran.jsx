@@ -3,8 +3,8 @@ import axios from 'axios';
 import PropTypes from 'prop-types';
 import './NoticiaGran.css';
 import { Link, useParams } from "react-router-dom";
-import Menu from '../Navbar/Menu'
 import Footer from '../Footer/Footer'
+import MenuBurger from '../Navbar/MenuBureger';
 
 
 export default function NoticiaGran() {
@@ -30,7 +30,7 @@ export default function NoticiaGran() {
   if (error) return <p>Error!</p>;
   return (
     <div className='llegir-mes'>
-      <Menu />
+      <MenuBurger />
       <div className="noticia-gran">
         <div className='go_Back'>
           <Link to="/actualitat"> <img src='../src/assets/BACK/arrow_back.svg' alt='Atras' className='imagen-atras'></img></Link>

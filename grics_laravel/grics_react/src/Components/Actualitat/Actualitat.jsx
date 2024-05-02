@@ -1,9 +1,9 @@
 import './Actualitat.css'
-import Menu from '../Navbar/Menu'
 import Footer from '../Footer/Footer'
 import { useState, useEffect } from 'react';
 import Noticia from '../Noticia/Noticia.jsx';
 import axios from 'axios';
+import MenuBurger from '../Navbar/MenuBureger.jsx';
 
 export default function Publicacions() {
 
@@ -54,7 +54,7 @@ export default function Publicacions() {
 
     return (
         <div className="publicacions">
-            <Menu/>
+            <MenuBurger/>
 
             <div className="publicacions_root">
                 <div className="publicacions__container">
