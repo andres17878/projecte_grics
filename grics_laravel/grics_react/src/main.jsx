@@ -17,6 +17,7 @@ import NoticiaGran from './Components/NoticiaGran/NoticiaGran';
 import Projecte from './Components/ProyecteEspecific/ProyecteEspecific';
 import Login from './Components/Login/Login';
 import Dashboard from './Components/Login/Dashboard';
+import Linies from './Components/NovaLinia/LiniaInvestigacio';
 
 
 const router = createBrowserRouter([
@@ -63,6 +64,15 @@ const router = createBrowserRouter([
     path: '/dashboard',
     element: <Dashboard/>,
   },
+
+
+
+
+
+  {
+    path: '/dashboard/linies/add',
+    element: <Linies/>,
+  }
   
 ]);
 
