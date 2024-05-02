@@ -6,7 +6,7 @@ function CrearNoticia() {
         <div className='divForm'>
             <div className="spaceContacte">
                 <form className='form'>
-                    <div>
+                    <div>  
                         <label htmlFor="nombre">Nom:</label>
                         <input type="text" id="nombre" name="nombre" placeholder="Nom" />
                     </div>
