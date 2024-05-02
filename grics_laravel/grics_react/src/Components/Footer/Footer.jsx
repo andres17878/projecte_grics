@@ -4,16 +4,14 @@ import { Link } from 'react-router-dom';
 const Footer = () => {
   return (
     <footer className={styles.footer}>
-      <p>Grup consolidat: 2021SGR00233</p>
-
+      <div className={styles["footer-text"]}>
+        <p>Grup consolidat: 2021SGR00233</p>
+        <p>Proyecto PID2022-140498OB-100 financiado por:</p>
+      </div>
       <div className={styles["Container"]}>
           <div className={styles["Logos"]}>
-            <img src='/src/assets/Logos/logo.svg' alt="Grics Logo"></img>
-            <img src='/src/assets/Logos/logo.svg' alt="Grics Logo"></img>
-            <img src='/src/assets/Logos/logo.svg' alt="Grics Logo"></img>
-            <img src='/src/assets/Logos/logo.svg' alt="Grics Logo"></img>
-
-
+            <img src='/src/assets/Logos/miciu-uefeder-aei.png' alt="Logo Gobierno de España" className={styles["gobierno"]}></img>
+        
 
           </div>
           <div className={styles["desenvolupat"]}>
