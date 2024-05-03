@@ -43,7 +43,7 @@ const LiniaInvestigacio = () => {
                     </div>
                 </div>
                 <div className='boton-Linia'>
-                    <button >Afegeix</button>
+                    <button className='estilo-boton'>Afegeix</button>
                 </div>
             </form>
          </div>

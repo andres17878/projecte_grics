@@ -1,21 +1,21 @@
-.recuadro_Linies{
+.recuadro_Linies {
     width: 90%;
-    margin-left: 5%;
-    margin-top: 2%;
-    margin-bottom: 2%;
-    margin-right: 5%;
+    margin: 2% auto;
     background-color: #002651;
     border-radius: 1em;
-    height: 90vh;
     padding: 1%;
-
 }
 
 .titulo_nuevas_Linies{
     display: flex;
+    justify-content: center; /* Centrar el contenido */
+    align-items: center; /* Centrar verticalmente */
 }
 .flecha_Linies{
     width: 3%;
+    height: 2.5em;
+    background-color: white;
+    border-radius: 100%;
 }
 
 .titulo-Linia{
@@ -28,6 +28,7 @@
 .formulario-Linia{
     display: flex;
     width: 100%;
+    flex-wrap: wrap; 
 
 }
 
@@ -39,7 +40,7 @@
 
 .Izquierda-Linia input{
     margin: 2em;
-    height: 4em;
+    height: 3em;
     border-radius: 2em;
 
 }
@@ -76,7 +77,53 @@ textarea::placeholder {
     background-color: white;
 }
 
-.boton-Linia{
+.boton-Linia {
+    display: flex;
+    justify-content: center;
+
     width: 100%;
-    align-items: center;
+    height: 100%;
+}
+.estilo-boton{
+    width: 15%;
+    height: 3em;
+    border-radius: 3em;
+    background-color: white;
+    color: black;
+    border: 2px solid black;
+}
+@media only screen and (max-width: 768px) {
+    .flecha_Linies{
+        width: 2em;
+        height: 2em;
+    }
+    .formulario-Linia {
+        flex-direction: column; 
+    }
+
+    .Izquierda-Linia, .Derecha-Linia {
+        width: 100%; 
+    }
+}
+
+.boton-Linia {
+    display: flex;
+    justify-content: center;
+    margin-top: 1em; 
+}
+
+.estilo-boton {
+    width: 15%;
+    max-width: 150px; /* Ancho máximo */
+    height: 3em;
+    border-radius: 3em;
+    background-color: white;
+    color: black;
+    border: 2px solid black;
+    cursor: pointer; 
+}
+
+input::placeholder,
+textarea::placeholder {
+    text-align: center;
 }
