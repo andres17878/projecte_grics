@@ -67,7 +67,10 @@ export default function Publicacions() {
         </button>
     ));
 
-    const currentItems = ids.slice(indexOfFirstItem, indexOfLastItem).map((id) => (
+    const currentItems = ids
+    .sort((a, b) => b.id - a.id) 
+    .slice(indexOfFirstItem, indexOfLastItem)
+    .map((id) => (
         <PublicacioCard key={id.id} id={id.id}/>
     ));
     

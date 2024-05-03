@@ -1,0 +1,66 @@
+.publicacionsFormContainer{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    color: white;
+    height: 100vh;
+    overflow: auto;
+}
+
+.titleNovaPublicacio{
+    display: flex;
+    justify-content: center;
+    font-size: 1.5em;
+    width: 80%;
+    margin-bottom: 1em;
+    background-color: #002651;
+
+}
+
+.publicacionsForm{
+    display: flex;
+    width: 90%;
+    margin: auto;
+    justify-content: center;
+    background-color: #002651;
+    border-radius: 10px;
+    height: 90%;
+}
+
+.formPublicacions{
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+}
+
+.formPublicacions input{
+    margin: 0.5em;
+    padding: 0.5em;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    width:50%;
+    height: 2em;
+    font-size: 0.8em;
+}
+
+.formPublicacions textarea{
+    margin: 0.5em;
+    padding: 0.5em;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    width:50%;
+}
+
+.formPublicacions button{
+    margin: 0.5em;
+    padding: 0.5em;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    width:10%;
+    background-color: #f5f5f5;
+    cursor: pointer;
+    margin-top: 1em;
+}
