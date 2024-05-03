@@ -20,7 +20,11 @@ class PublicacioController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $acio = Publicacions::create($request->all());
+        return response()->json([
+            'message' => 'Publicació creada',
+            'status' => 'OK'
+        ]);
     }
 
     /**
@@ -36,7 +40,12 @@ class PublicacioController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+        $acio = Publicacions::findOrFail($id);
+        $acio->update($request->all());
+        return response()->json([
+            'message' => 'Publicació actualitzada',
+            'status' => 'OK'
+        ]);
     }
     public function destroy(int $id)
     {
