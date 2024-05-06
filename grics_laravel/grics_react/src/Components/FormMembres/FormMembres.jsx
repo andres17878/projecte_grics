@@ -49,15 +49,19 @@ function Form_M() {
                     <div>
                         <input type="text" id="infoM" name="infoM" placeholder="Info/Descripcio" />
                     </div>
-                    <div 
-                        onDrop={handleImageChange} 
-                        onDragOver={handleDragOver} 
-                        style={{height: '200px', width: '200px', border: '1px dashed #ccc'}}
-                    >
-                        {imagePreview && (
-                            <img src={imagePreview} alt="Imagen seleccionada" />
-                        )}
+                    <div className='seccion-img'>
+                    <div
+                            onDrop={handleImageChange}
+                            onDragOver={handleDragOver}
+                            className="image-upload"
+                        >
+                            {imagePreview && (
+                                <img src={imagePreview} alt="Imagen seleccionada" />
+                            )}
+                        </div>
+
                     </div>
+                        
                     <div className="button">
                         <button type="submit" className="addMembre">Afegir</button>
                     </div>
