@@ -1,5 +1,4 @@
 import "./HomePage.css";
-import Menu from "../Navbar/Menu";
 import Footer from "../Footer/Footer";
 import '../../index.css';
 import fotoPrincipal from '../../assets/Home/facultat1.gif'
