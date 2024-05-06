@@ -3,7 +3,6 @@ import * as ReactDOM from 'react-dom';
 
 import {
   createBrowserRouter,
-  Form,
   RouterProvider,
 } from 'react-router-dom';
 import HomePage from './Components/HomePage/HomePage';
@@ -71,6 +70,7 @@ const router = createBrowserRouter([
   {
     path: '/dashboard/linies/add',
     element: <Linies/>,
+  },
   {
     path: '/dashboard/publicacions/add',
     element: <PublicacionsForm/>
@@ -78,7 +78,7 @@ const router = createBrowserRouter([
   {
     path:'/Publicacions/:id',
     element: <PublicacionsForm/>
-  }
+  },
   
 
 
