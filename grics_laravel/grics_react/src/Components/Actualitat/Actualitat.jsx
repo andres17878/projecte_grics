@@ -11,6 +11,26 @@ export default function Publicacions() {
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
 
+    const [ids, setIds] = useState([]);
+
+    const fetchIdsFromDatabase = async () => {
+        const response = await axios.get('http://localhost:8000/api/allIdNoticies');
+        return response.data;
+    }
+
+    useEffect(() => {
+        fetchIdsFromDatabase()
+            .then(fetchedIds => {
+                setIds(fetchedIds);
+                setLoading(false);
+            })
+            .catch(error => {
+                console.error('Error fetching IDs:', error);
+                setError(error);
+                setLoading(false);
+            });
+    } , []);
+
     const[currentPage, setCurrentPage] = useState(1);
     const itemsPerPage = 10;
 
@@ -48,9 +68,9 @@ export default function Publicacions() {
         </button>
     ));
 
-    const currentItems = Array.from({ length: count }, (_, index) => index + 1)
-    .slice(indexOfFirstItem, indexOfLastItem)
-    .map((id) => <Noticia key={id} id={id} />);
+    const currentItems = ids.slice(indexOfFirstItem, indexOfLastItem).map((id) => (
+        <Noticia key={id.id} id={id.id}/>
+    ));
 
     return (
         <div className="publicacions">

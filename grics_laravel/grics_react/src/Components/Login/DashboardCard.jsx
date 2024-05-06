@@ -2,8 +2,10 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import PropTypes from "prop-types";
 import "./DashboardCard.css";
+import { useNavigate } from "react-router-dom";
 
 const DashboardCard = ({ selectedOption }) => {
+    const history = useNavigate();
     const [data, setData] = useState([]);
     const [loading, setLoading] = useState(true);
 
@@ -43,9 +45,24 @@ const DashboardCard = ({ selectedOption }) => {
         fetchData();
     }, [selectedOption]);
 
-    const handleUpdate = (id) => {
-        console.log("Update", id);
-    };
+    const handleUpdate = async (id) => {
+        try{
+            const token = localStorage.getItem('token');
+            const response = await axios.get(`http://localhost:8000/api/all${selectedOption}/${id}`, {
+                headers: {
+                    Authorization: `Bearer ${token}`
+                }
+            });
+            if(response.status === 200){
+                history(`/${selectedOption}/${id}`, {state: {data: response.data}})
+            }
+
+        } catch (error) {
+            console.error("Error fetching item:", error);
+
+        }
+        
+    }
 
     const handleDelete = async (id) => {
         try {

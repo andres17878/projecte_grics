@@ -18,6 +18,7 @@ import Projecte from './Components/ProyecteEspecific/ProyecteEspecific';
 import Login from './Components/Login/Login';
 import Dashboard from './Components/Login/Dashboard';
 import Linies from './Components/NovaLinia/LiniaInvestigacio';
+import PublicacionsForm from './Components/PublicacionsForm/PublicacionsForm';
 
 
 const router = createBrowserRouter([
@@ -64,14 +65,16 @@ const router = createBrowserRouter([
     path: '/dashboard',
     element: <Dashboard/>,
   },
-
-
-
-
-
   {
     path: '/dashboard/linies/add',
     element: <Linies/>,
+  {
+    path: '/dashboard/publicacions/add',
+    element: <PublicacionsForm/>
+  },
+  {
+    path:'/Publicacions/:id',
+    element: <PublicacionsForm/>
   }
   
 ]);
