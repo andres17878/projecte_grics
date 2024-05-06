@@ -3,6 +3,7 @@ import * as ReactDOM from 'react-dom';
 
 import {
   createBrowserRouter,
+  Form,
   RouterProvider,
 } from 'react-router-dom';
 import HomePage from './Components/HomePage/HomePage';
@@ -19,6 +20,8 @@ import Login from './Components/Login/Login';
 import Dashboard from './Components/Login/Dashboard';
 import Linies from './Components/NovaLinia/LiniaInvestigacio';
 import PublicacionsForm from './Components/PublicacionsForm/PublicacionsForm';
+
+import Form_M from './Components/FormMembres/FormMembres';
 
 
 const router = createBrowserRouter([
@@ -76,6 +79,20 @@ const router = createBrowserRouter([
     path:'/Publicacions/:id',
     element: <PublicacionsForm/>
   }
+  
+
+
+
+
+
+
+
+
+
+  {
+    path: '/dashboard/Membres/form_Membres',
+    element: <Form_M/>,
+  },
   
 ]);
 
