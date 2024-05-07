@@ -66,6 +66,10 @@ const DashboardCard = ({ selectedOption }) => {
 
     const handleDelete = async (id) => {
         try {
+            const confirmDelete = window.confirm("Estàs segur que vols eliminar aquest element? Això no es pot desfer. OK per eliminar, Cancel per cancel·lar.");
+            if (!confirmDelete) {
+                return;
+            }
             const token = localStorage.getItem('token'); 
             const deleteResponse = await axios.delete(`http://localhost:8000/api/${selectedOption}/${id}`, {
                 headers: {
@@ -90,7 +94,9 @@ const DashboardCard = ({ selectedOption }) => {
                 <p>Loading...</p>
             ) : (
                 <ul className="dashboardCardUl">
-                    {data.map((item) => (
+                    {data
+                    .sort((a, b) => b.id - a.id)
+                    .map((item) => (
                         <li key={item.id} className="itemCard">
                             <div className="lineaDash"></div>{" "}
                             <div className="cardContent">

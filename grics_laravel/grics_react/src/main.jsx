@@ -1,5 +1,7 @@
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
+import { Navigate} from 'react-router-dom';
+import PropTypes from 'prop-types';
 
 import {
   createBrowserRouter,
@@ -21,6 +23,17 @@ import Linies from './Components/NovaLinia/LiniaInvestigacio';
 import PublicacionsForm from './Components/PublicacionsForm/PublicacionsForm';
 
 import Form_M from './Components/FormMembres/FormMembres';
+
+const PrivateRoute = ({ children }) => {
+  const isLoggedIn = localStorage.getItem('token');
+
+  return isLoggedIn ? children : <Navigate to="/login" />;
+};
+
+PrivateRoute.propTypes = {
+  children: PropTypes.node.isRequired,
+};
+
 
 
 const router = createBrowserRouter([
@@ -73,11 +86,11 @@ const router = createBrowserRouter([
   },
   {
     path: '/dashboard/publicacions/add',
-    element: <PublicacionsForm/>
+    element: <PrivateRoute><PublicacionsForm/></PrivateRoute>
   },
   {
     path:'/Publicacions/:id',
-    element: <PublicacionsForm/>
+    element: <PrivateRoute><PublicacionsForm/></PrivateRoute>
   },
   
 
@@ -95,6 +108,8 @@ const router = createBrowserRouter([
   },
   
 ]);
+
+
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>

@@ -24,7 +24,8 @@ class PublicacionsSeeder extends Seeder
                 'volum' => $faker->numberBetween(1, 100),
                 'resum' => $faker->text,
                 'link' => $faker->url,
-                'data' => $faker->date,
+                'created_at' => now(),
+                'updated_at'=> now(),
             ]);
         }
     }
