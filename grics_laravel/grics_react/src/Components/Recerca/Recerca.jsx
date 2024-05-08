@@ -1,10 +1,9 @@
 import './Recerca.css'
-import Menu from '../Navbar/Menu'
 import Footer from '../Footer/Footer'
 import CaruselLinias from './Carousel/Carousel-linies'
 import CaruselProjectes from './Carousel/Carousel-projecte'
 import CarouselContractes from './Carousel/Carousel-contractes'
-// import { useState, useEffect } from 'react';
+import MenuBurger from '../Navbar/MenuBureger'
 
 
 
@@ -13,7 +12,7 @@ export default function Recerca() {
       
     return (
         <div className="recerca">
-            <Menu/>
+            <MenuBurger/>
             <div className='titulo-recerca'>
                 <div className='line-1'></div>
                     <h1 className='pppp'>RECERCA</h1>

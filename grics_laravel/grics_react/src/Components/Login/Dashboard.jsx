@@ -71,6 +71,16 @@ const Dashboard = () => {
                         <option value="Actualitat">Actualitat</option>
                     </select>
                 </div>
+
+                <div className="addButton">
+                    <button
+                        onClick={() => {
+                            navigate(`/dashboard/${currentSection}/add`);
+                        }}
+                    >
+                        Afegeix {currentSection}
+                    </button>
+                </div>
             </div>
 
             <div className="dashboardCards">

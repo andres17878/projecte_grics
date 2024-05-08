@@ -1,12 +1,12 @@
 import './Membres.css'
-import Menu from "../Navbar/Menu";
 import Footer from "../Footer/Footer";
 import Comp_Membres from '../MiembroComp/MiembroComp'
 import general from '../../assets/membre/general.jpg'
+import MenuBurger from '../Navbar/MenuBureger';
 function Membre() {
   return (
     <div className="paginaMembres">
-    <Menu />
+    <MenuBurger />
 
 
       <div className="contenedorMembres">

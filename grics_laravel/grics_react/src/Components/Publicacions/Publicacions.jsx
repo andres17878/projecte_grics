@@ -1,9 +1,9 @@
 import './Publicacions.css'
-import Menu from '../Navbar/Menu'
 import Footer from '../Footer/Footer'
 import { useState, useEffect } from 'react';
 import PublicacioCard from '../PublicacioCard/PublicacioCard'
 import axios from 'axios';
+import MenuBurger from '../Navbar/MenuBureger';
 
 export default function Publicacions() {
 
@@ -67,7 +67,10 @@ export default function Publicacions() {
         </button>
     ));
 
-    const currentItems = ids.slice(indexOfFirstItem, indexOfLastItem).map((id) => (
+    const currentItems = ids
+    .sort((a, b) => b.id - a.id) 
+    .slice(indexOfFirstItem, indexOfLastItem)
+    .map((id) => (
         <PublicacioCard key={id.id} id={id.id}/>
     ));
     
@@ -75,7 +78,7 @@ export default function Publicacions() {
 
     return (
         <div className="publicacions">
-            <Menu/>
+            <MenuBurger/>
 
             <div className="publicacions_root">
                 <div className="publicacions__container">

@@ -22,7 +22,7 @@ return new class extends Migration
             $table->integer('volum');
             $table->string('resum');
             $table->string('link');
-            $table->date('data');
+            $table->timestamps();
         });
     }
 

@@ -122,6 +122,12 @@ Route::get('allProjectes', function(Request $request){
 });
 
 
+Route::get('allPublicacions/{id}', function(Request $request, $id){
+    $publicacions = \DB::table('publicacions')->where('id', $id)->first();
+    return response() ->json($publicacions);
+});
+
+
 // Login
 
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
@@ -135,6 +141,8 @@ Route::middleware(Authenticate::class)->group(function(){
     Route::delete('Línies/{id}', [LiniaController::class, 'destroy']);
     Route::delete('Actualitat/{id}', [NoticiaController::class, 'destroy']);
     Route::delete('Projectes/{id}', [ProjecteController::class, 'destroy']);
+    Route::post('PublicacionsAdd', [PublicacioController::class, 'store']);
+    Route::put('PublicacionsUpdate/{id}', [PublicacioController::class, 'update']);
 });
 
 Route::controller(AuthController::class)->group(function(){

@@ -2,8 +2,10 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import PropTypes from "prop-types";
 import "./DashboardCard.css";
+import { useNavigate } from "react-router-dom";
 
 const DashboardCard = ({ selectedOption }) => {
+    const history = useNavigate();
     const [data, setData] = useState([]);
     const [loading, setLoading] = useState(true);
 
@@ -43,12 +45,31 @@ const DashboardCard = ({ selectedOption }) => {
         fetchData();
     }, [selectedOption]);
 
-    const handleUpdate = (id) => {
-        console.log("Update", id);
-    };
+    const handleUpdate = async (id) => {
+        try{
+            const token = localStorage.getItem('token');
+            const response = await axios.get(`http://localhost:8000/api/all${selectedOption}/${id}`, {
+                headers: {
+                    Authorization: `Bearer ${token}`
+                }
+            });
+            if(response.status === 200){
+                history(`/${selectedOption}/${id}`, {state: {data: response.data}})
+            }
+
+        } catch (error) {
+            console.error("Error fetching item:", error);
+
+        }
+        
+    }
 
     const handleDelete = async (id) => {
         try {
+            const confirmDelete = window.confirm("Estàs segur que vols eliminar aquest element? Això no es pot desfer. OK per eliminar, Cancel per cancel·lar.");
+            if (!confirmDelete) {
+                return;
+            }
             const token = localStorage.getItem('token'); 
             const deleteResponse = await axios.delete(`http://localhost:8000/api/${selectedOption}/${id}`, {
                 headers: {
@@ -73,7 +94,9 @@ const DashboardCard = ({ selectedOption }) => {
                 <p>Loading...</p>
             ) : (
                 <ul className="dashboardCardUl">
-                    {data.map((item) => (
+                    {data
+                    .sort((a, b) => b.id - a.id)
+                    .map((item) => (
                         <li key={item.id} className="itemCard">
                             <div className="lineaDash"></div>{" "}
                             <div className="cardContent">
