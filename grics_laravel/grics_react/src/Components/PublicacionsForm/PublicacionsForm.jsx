@@ -14,10 +14,15 @@ export default function PublicacionsForm() {
     const navigate = useNavigate();
 
     const [formData, setFormData] = useState({
+        cognom: "",
+        nom: "",
+        anyo: "",
         titol: "",
-        foto: "",
-        descripcio: "",
-
+        revista: "",
+        numero: "",
+        volum: "",
+        resum: "",
+        link: "",
     });
 
     useEffect(() => {
@@ -31,16 +36,15 @@ export default function PublicacionsForm() {
         e.preventDefault();
         const formData = new FormData(e.target);
         const data = {
-            cognom: "",
-            nom: "",
-            anyo: "",
-            titol: "",
-            revista: "",
-            numero: "",
-            volum: "",
-            resum: "",
-            link: "",
-
+            cognom: formData.get("cognom"),
+            nom: formData.get("nom"),
+            anyo: formData.get("any"),
+            titol: formData.get("titol"),
+            revista: formData.get("revista"),
+            numero: formData.get("numero"),
+            volum: formData.get("volum"),
+            resum: formData.get("resum"),
+            link: formData.get("link"),
         };
         try {
             const token = localStorage.getItem("token");
