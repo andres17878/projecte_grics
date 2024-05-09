@@ -1,31 +1,36 @@
 import './Contacte.css'
-import Menu from '../Navbar/Menu'
+import Menu from '../Navbar/MenuBureger'
 import Footer from '../Footer/Footer'
-import Contacte_C from '../ContacteComp/ContacteComp'
-import map from '../../assets/map/mapUB.png'
+
 export default function Contacte() {
     return (
-        <div className="contacte">
+        <div>
             <Menu/>
-            <br/>
-            
-
-            <div className='ContacteC'>
-                <Contacte_C/>
-                <div className='info'>
-                    <div className="imgMap">
-                        <img className="mapUB" src={map} alt="foto_mapa" />
-                    </div>
-                    <div className='plusInfo'>
-                        <p><span class="material-symbols-outlined"></span>
-                        <b>Direccion: </b>..........</p><br/>
-                        <p><b>@ Correo : </b>..........</p><br/>
-                        <p><b>Telefono : </b>..........</p><br/>
+            <div className="contacte">
+                <div className="contacte_derecha">
+                    <h1>Contacta amb nosaltres</h1>
+                    <div className="separacion-contacte"></div>
+                    <h3>Direcció: </h3>
+                    <h4>Gran Via de les Corts Catalanes, 585, L'Eixample, 08007 Barcelona</h4>
+                    <h3>Correu electrònic: </h3>
+                    <h4>grics@grics.com</h4>
+                    <h3>Telèfon: </h3>
+                    <h4>93 123 45 67</h4>
+                    <br/>
+                    <div className="separacion-contacte"></div>
+                    <div className='redes'>
+                        <a href="https://www.facebook.com" target="_blank" rel="noreferrer">
+                            <img src="https://img.icons8.com/material-rounded/48/000000/facebook.png" alt="facebook"/>
+                        </a>
+                        <a href="https://www.twitter.com" target="_blank" rel="noreferrer">
+                            <img src="https://img.icons8.com/material-rounded/48/000000/twitter.png" alt="twitter"/>
+                        </a>
+                        <a href="https://www.linkedin.com" target="_blank" rel="noreferrer">
+                            <img src="https://img.icons8.com/material-rounded/48/000000/linkedin.png" alt="linkedin"/>
+                        </a>
                     </div>
                 </div>
             </div>
-            <br/>          
-            
             <Footer/>
         </div>
 
