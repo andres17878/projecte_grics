@@ -1,3 +1,30 @@
+.contenedor-secciones {
+    display: flex;
+}
+
+.seccion-datos1{
+    display: flex;
+    flex-direction: column;
+    width: 50%; /* Ajusta esto según tus necesidades */
+    height: 100%;
+    overflow: auto;
+}
+
+.seccion-datos2{
+    display: flex;
+    flex-direction: column;
+    width: 50%; /* Ajusta esto según tus necesidades */
+    height: 100%;
+    overflow: auto;
+}
+.seccion-datosGeneral{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+}
+
 .publicacionsFormContainer{
     display: flex;
     flex-direction: column;
@@ -13,8 +40,6 @@
     font-size: 1.5em;
     width: 80%;
     margin-bottom: 1em;
-    background-color: #002651;
-
 }
 
 .publicacionsForm{
@@ -35,8 +60,20 @@
     justify-content: center;
     align-items: center;
 }
-
-.formPublicacions input{
+/*  */
+.publicacionsForm input[type="text"],
+.publicacionsForm input[type="number"],
+.publicacionsForm textarea{
+    margin: 4%;
+    width: 40%;
+    padding: 1.5%;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 15px;
+    text-align: left;
+}
+/*  */
+.formPublicacions input{    
     margin: 0.5em;
     padding: 0.5em;
     border-radius: 5px;
@@ -46,21 +83,28 @@
     font-size: 0.8em;
 }
 
-.formPublicacions textarea{
+/* .formPublicacions textarea{
     margin: 0.5em;
     padding: 0.5em;
     border-radius: 5px;
     border: 1px solid #ccc;
     width:50%;
-}
+} */
 
 .formPublicacions button{
-    margin: 0.5em;
-    padding: 0.5em;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-    width:10%;
-    background-color: #f5f5f5;
+    background-color: #ccc;
+    border: none;
+    color: black;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
     cursor: pointer;
-    margin-top: 1em;
+    border-radius: 15px;
+}
+.formPublicacions button:hover{
+    background-color: #B44343;
+    color: white;
 }
