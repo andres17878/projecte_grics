@@ -49,8 +49,11 @@ export default function PublicacionsForm() {
         try {
             const token = localStorage.getItem("token");
 
-            // Here check if we are trying to add or edit a publication
             if (location.state) {
+                const confirmUpdate = window.confirm(`Estàs segur que vols actualitzar la publicació ${location.state.data.titol}?`);
+                if (!confirmUpdate) {
+                    return;
+                }
                 await axios.put("http://localhost:8000/api/PublicacionsUpdate/" + location.state.data.id, data, {
                     headers: {
                         Authorization: `Bearer ${token}`,
@@ -64,8 +67,10 @@ export default function PublicacionsForm() {
                     navigate("/dashboard");
                 });
             } else {
-    
-
+                const confirmAdd = window.confirm("Estàs segur que vols afegir aquesta publicació?");
+                if (!confirmAdd) {
+                    return;
+                }
                 await axios.post("http://localhost:8000/api/PublicacionsAdd", data, {
                     headers: {
                         Authorization: `Bearer ${token}`,

@@ -19,7 +19,8 @@ class NoticiesSeeder extends Seeder
                 'foto' => $faker->imageUrl(),
                 'titol' => $faker->sentence(),
                 'descripcio' => $faker->paragraph(),
-                'data' => $faker->date(),
+                'created_at' => now(),
+                'updated_at'=> now(),
             ]);
         }
     }
