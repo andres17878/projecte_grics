@@ -1,11 +1,11 @@
-.contenedor-secciones {
+/* .contenedor-secciones {
     display: flex;
 }
 
 .seccion-datos1{
     display: flex;
     flex-direction: column;
-    width: 50%; /* Ajusta esto según tus necesidades */
+    width: 50%;
     height: 100%;
     overflow: auto;
 }
@@ -13,7 +13,7 @@
 .seccion-datos2{
     display: flex;
     flex-direction: column;
-    width: 50%; /* Ajusta esto según tus necesidades */
+    width: 50%; 
     height: 100%;
     overflow: auto;
 }
@@ -60,7 +60,7 @@
     justify-content: center;
     align-items: center;
 }
-/*  */
+
 .publicacionsForm input[type="text"],
 .publicacionsForm input[type="number"],
 .publicacionsForm textarea{
@@ -72,7 +72,7 @@
     border-radius: 15px;
     text-align: left;
 }
-/*  */
+
 .formPublicacions input{    
     margin: 0.5em;
     padding: 0.5em;
@@ -82,14 +82,6 @@
     height: 2em;
     font-size: 0.8em;
 }
-
-/* .formPublicacions textarea{
-    margin: 0.5em;
-    padding: 0.5em;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-    width:50%;
-} */
 
 .formPublicacions button{
     background-color: #ccc;
@@ -107,4 +99,239 @@
 .formPublicacions button:hover{
     background-color: #B44343;
     color: white;
+} */
+
+/* 
+.input-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.input-fields, .resum-link-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.publicacionsFormContainer {
+    font-family: "Roboto Condensed", sans-serif;
+    font-size: large;
+}
+
+.titolFormP h1 {
+    font-size: 2em;
+    text-align: center;
+    margin-bottom: 0;
+    font-weight: 400;
+}
+
+.goBackContainer {
+    margin-bottom: 1%;
+}
+
+.goBackContainer .imgBack img {
+    max-height: 200px;
+    max-width: 200px;
+}
+
+.FormPublicacions {
+    height: 80%; 
+    margin: 1%;
+    padding: 5%;
+    background-color: #002651;
+    color: white;
+    border-radius: 10px;
+}
+
+.seccionForm div {
+    margin-bottom: 1%;
+}
+
+.seccionForm input[type="text"],
+.seccionForm input[type="number"],
+.seccionForm textarea {
+    margin: 0.5%;
+    width: 40%;
+    padding: 1%;
+    margin-bottom: 5px;
+    border: 1px solid #ccc;
+    border-radius: 15px;
+    text-align: left;
+}
+
+.seccionForm input::placeholder,
+.seccionForm textarea::placeholder {
+    text-align: left;
+}
+
+.button {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.button button {
+    background-color: #ccc;
+    border: none;
+    color: black;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 1px 5px;
+    cursor: pointer;
+    border-radius: 15px;
+    transition: background-color 0.3s ease;
+}
+
+.button button:hover {
+    background-color: #B44343;
+    color: white;
+}
+
+@media screen and (max-width: 480px) {
+    .FormPublicacions { 
+        padding: 3%;
+        width: 90%;
+        margin: 5% auto;
+    }
+
+    .seccionForm input,
+    .seccionForm textarea {
+        width: 60%;
+        margin: 20px auto;
+        display:block;
+    }
+
+    .button {
+        margin-top: 20px;
+    }
+} */
+
+.publicacionsFormContainer {
+    font-family: "Roboto Condensed", sans-serif;
+    font-size: large;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* height: 100%; */
+}
+/* .titolFormP {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1%;
+} */
+.titolFormP h1 {
+    
+    font-size: 2em;
+    text-align: center;
+    margin-bottom: 50px;
+    font-weight: 500;
+}
+
+.goBackContainer {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    margin-bottom: 1%;
+}
+
+.goBackContainer .imgBack img {
+    max-height: 200px;
+    max-width: 200px;
+}
+
+.FormPublicacions {
+    height: 80%; 
+    margin: 5%;
+    padding: 5%;
+    background-color: #002651;
+    color: white;
+    border-radius: 30px;
+}
+
+.seccionForm {
+    margin-bottom: 1%;
+}
+
+.formP {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.formP > div {
+    flex: 1 1 45%; /* Ocupa el 45% del espacio para dos columnas */
+    margin-bottom: 15px;
+}
+
+.formP > div:nth-child(odd) {
+    margin-right: 5%; /* Espacio entre las columnas */
+}
+
+.seccionForm input[type="text"],
+.seccionForm input[type="number"],
+.seccionForm input[type="date"],
+.seccionForm textarea,
+.seccionForm input::placeholder {
+    text-align: left;
+    width: 100%;
+    margin:2%;
+    padding: 2.2%;
+    box-sizing: border-box;
+    margin-bottom: 5px;
+    border: 1px;
+    border-radius: 15px;
+}
+
+.button {
+    /* text-align: center;
+    margin-top: 20px; */
+
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}   
+
+.button button {
+    background-color: #ccc;
+    border: none;
+    color: black;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 15px;
+    transition: background-color 0.3s ease;
+}
+
+.button button:hover {
+    background-color: #B44343;
+    color: white;
+}
+
+@media screen and (max-width: 480px) {
+    .FormPublicacions { 
+        padding: 1%;
+        width: 90%;
+        margin: 5%;
+    }
+
+    .formP > div {
+        flex: 1 1 100%; /* Cambia a una sola columna en pantallas pequeñas */
+        margin-right: 0;
+    }
+
+    .seccionForm input,
+    .seccionForm textarea {
+        width: 100%;
+        margin: 5px 0; /* Ajusta el margen para una mejor separación */
+    }
+
+    .button {
+        margin-top: 20px;
+    }
 }

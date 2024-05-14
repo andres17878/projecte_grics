@@ -106,49 +106,52 @@ export default function PublicacionsForm() {
     return (
        <div className="publicacionsFormContainer">
 
-    <div className="goBackContainer">
-        <Link to="/dashboard" className="imgBack"> 
-            <img src={BACK} alt="back" />
-        </Link>
-    </div>
-    
-    
-    <div className="publicacionsForm">
-
-        <form className="formPublicacions" onSubmit={handleSubmit}>
-            <h1 className="titleNovaPublicacio">  
-                {location.state ? "Editar publicació" : "Nova publicació"}
-            </h1>
-            <div className="seccion-datosGeneral">
-            <div className="seccion-datos1">
-            <input type="text" name="cognom" value={formData.cognom} onChange={e => setFormData({ ...formData, cognom: e.target.value})} required  placeholder="Cognom" />
-
-            <input type="text" name="nom" value={formData.nom} onChange={e => setFormData({ ...formData, nom: e.target.value})} required  placeholder="Nom"/>
-
-            <input type="number" name="any" value={formData.anyo} onChange={e => setFormData({ ...formData, anyo: e.target.value})} required  placeholder="Any"/>
-
-            <input type="text" name="titol" value={formData.titol} onChange={e => setFormData({ ...formData, titol: e.target.value})} required  placeholder="Titol"/>
-
-            
-            <input type="text" name="revista" value={formData.revista} onChange={e => setFormData({ ...formData, revista: e.target.value})} required  placeholder="Revista"/>
-
-            <input type="number" name="numero" value={formData.numero} onChange={e => setFormData({ ...formData, numero: e.target.value})} required  placeholder="Numero"/>
-
-           
-            <input type="number" name="volum" value={formData.volum} onChange={e => setFormData({ ...formData, volum: e.target.value})} required  placeholder="Volumn"/>
+        <div className="goBackContainer">
+            <Link to="/dashboard" className="imgBack"> 
+                <img src={BACK} alt="back" />
+            </Link>
+        </div>
+        <div className='FormPublicacions'>
+            <div className="seccionForm">
+            <div className='titolFormP'>
+                        <h1>{location.state ? "Editar publicació" : "Nova publicació"}</h1>
+                    </div>
+                <form className='formP'>
+                    
+                    <div>
+                        <input type="text" name="nom" value={formData.nom} onChange={e => setFormData({ ...formData, nom: e.target.value})} required  placeholder="Nom"/>
+                    </div>
+                    <div>
+                        <input type="text" name="cognom" value={formData.cognom} onChange={e => setFormData({ ...formData, cognom: e.target.value})} required  placeholder="Cognom" />
+                    </div>
+                    <div>
+                        <input type="date" name="any" value={formData.anyo} onChange={e => setFormData({ ...formData, anyo: e.target.value})} required  placeholder="Any"/>
+                    </div>
+                    <div>
+                        <input type="text" name="titol" value={formData.titol} onChange={e => setFormData({ ...formData, titol: e.target.value})} required  placeholder="Titol"/>
+                    </div>
+                    <div>
+                        <input type="text" name="revista" value={formData.revista} onChange={e => setFormData({ ...formData, revista: e.target.value})} required  placeholder="Revista"/>
+                    </div>
+                    <div>
+                        <input type="number" name="numero" value={formData.numero} onChange={e => setFormData({ ...formData, numero: e.target.value})} required  placeholder="Numero"/>
+                    </div>
+                    <div>
+                        <input type="number" name="volum" value={formData.volum} onChange={e => setFormData({ ...formData, volum: e.target.value})} required  placeholder="Volumn"/>
+                    </div>
+                    <div>
+                        <textarea type="text" name="resum" value={formData.resum} onChange={e => setFormData({ ...formData, resum: e.target.value})} required  placeholder="Resum"/>
+                    </div>
+                    <div>
+                        <input type="text" name="link" value={formData.link} onChange={e => setFormData({ ...formData, link: e.target.value})} required  placeholder="Link" />
+                    </div>
+                    
+                    <div className="button">
+                        <button type="submit">Afegir</button>
+                    </div>
+                </form>
             </div>
-            <div className="seccion-datos2">  
-                <textarea type="text" name="resum" value={formData.resum} onChange={e => setFormData({ ...formData, resum: e.target.value})} required  placeholder="Resum"/>
-
-            
-                <input type="text" name="link" value={formData.link} onChange={e => setFormData({ ...formData, link: e.target.value})} required  placeholder="Link" />
-
-                <button type="submit">Enviar</button>
-            </div>
-            </div>
-
-        </form>
-    </div>
-</div>
+        </div>
+         </div>
     );
 }
