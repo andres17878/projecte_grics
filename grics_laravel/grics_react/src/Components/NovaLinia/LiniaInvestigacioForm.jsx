@@ -1,4 +1,3 @@
-import React from 'react';
 import './Linia_InvestigacioForm.css';
 import flecha from '../../assets/BACK/arrow_back.svg';
 import { useState } from 'react';
@@ -6,22 +5,21 @@ import Swal from "sweetalert2";
 import { useLocation } from "react-router-dom";
 import {useNavigate} from "react-router-dom";
 import { useEffect } from 'react';
+import axios from "axios";
 
 
 const LiniaInvestigacioForm = () => {
     const location = useLocation();
     const navigate = useNavigate();
+    const [imagePath, setImagePath] = useState(null);
+    const [imagen, setImagen] = useState(null);
+
+
 
     const [formData, setFormData] = useState({
-        cognom: "",
-        nom: "",
-        anyo: "",
+        foto: "",
         titol: "",
-        revista: "",
-        numero: "",
-        volum: "",
-        resum: "",
-        link: "",
+        descripcio: "",
     });
 
     useEffect(() => {
@@ -30,51 +28,72 @@ const LiniaInvestigacioForm = () => {
         }
     }, [location]);
 
+    function generateImagePath(imageName) {
+        return `/grics_react/src/assets/${imageName}`;
+    }
+
 
     const handleSubmit = async (e) => {
         e.preventDefault();
         const formData = new FormData(e.target);
+        generateImagePath(formData.get("foto"));
+
+        const imageFormData = new FormData();
+        imageFormData.append("file", formData.get("foto"));
+
         const data = {
-            cognom: formData.get("cognom"),
-            nom: formData.get("nom"),
-            anyo: formData.get("any"),
+            foto: imagePath,
             titol: formData.get("titol"),
-            revista: formData.get("revista"),
-            numero: formData.get("numero"),
-            volum: formData.get("volum"),
-            resum: formData.get("resum"),
-            link: formData.get("link"),
+            descripcio: formData.get("descripcio"),
         };
         try {
             const token = localStorage.getItem("token");
 
-            // Here check if we are trying to add or edit a publication
             if (location.state) {
-                await axios.put("http://localhost:8000/api/PublicacionsUpdate/" + location.state.data.id, data, {
+                await axios.put("http://localhost:8000/api/LíniesAdd/" + location.state.data.id, data, {
                     headers: {
                         Authorization: `Bearer ${token}`,
                     },
                 });
+
+                if(imagen){
+                    await axios.post("http://localhost:8000/api/ImageUpload", imagen, {
+                    headers: {
+                        Authorization: `Bearer ${token}`,
+                    },
+                });
+                }
+
                 Swal.fire({
                     icon: "success",
-                    title: "Publicació actualitzada",
-                    text: "La publicació s'ha actualitzat correctament",
+                    title: "Línia actualitzada",
+                    text: "La línia s'ha actualitzat correctament",
                 }).then(() => {
                     navigate("/dashboard");
                 });
             } else {
     
 
-                await axios.post("http://localhost:8000/api/PublicacionsAdd", data, {
+                await axios.post("http://localhost:8000/api/LíniesAdd", data, {
                     headers: {
                         Authorization: `Bearer ${token}`,
                     },
                 });
 
+                console.log(imagen);
+
+                if(imagen){
+                    await axios.post("http://localhost:8000/api/ImageUpload", imagen, {
+                    headers: {
+                        Authorization: `Bearer ${token}`,
+                    },
+                });
+                }
+
                 Swal.fire({
                     icon: "success",
-                    title: "Publicació afegida",
-                    text: "La publicació s'ha afegit correctament",
+                    title: "Línia afegida",
+                    text: "La línia s'ha afegit correctament",
                 }).then(() => {
                     navigate("/dashboard");
                 });
@@ -91,7 +110,7 @@ const LiniaInvestigacioForm = () => {
                 Swal.fire({
                     icon: "error",
                     title: "Error",
-                    text: "No s'ha pogut afegir la publicació",
+                    text: "No s'ha pogut afegir la línia",
                 });
             }
         }
@@ -102,13 +121,18 @@ const LiniaInvestigacioForm = () => {
     const handleImageChange = (e) => {
         const file = e.target.files[0];
         const reader = new FileReader();
+        console.log(file);
+        
+
 
         reader.onloadend = () => {
             setImagePreview(reader.result);
+            setImagen(file);
         }
 
         if (file) {
             reader.readAsDataURL(file);
+            setImagePath(generateImagePath(file.name));
         } else {
             setImagePreview(null);
         }
@@ -117,14 +141,13 @@ const LiniaInvestigacioForm = () => {
          <div className='recuadro_Linies'>
             <div className='titulo_nuevas_Linies'>
                 <img src={flecha} alt='back' className='flecha_Linies'></img>
-                <h1 className='titulo-Linia'>Nova Linia d'Investigació</h1>
+                <h1 className='titulo-Linia'>{location.state ? "Edita la línia" : "Nova línia"}</h1>
             </div>
-            <form >
+            <form onSubmit={handleSubmit} >
                 <div className='formulario-Linia'>
                     <div className='Izquierda-Linia'>
-                        <input type="text" placeholder='TITOL'/>
-                        <input type="text" placeholder='AUTORS/ES'/>
-                        <textarea placeholder='TEXT'></textarea>
+                        <input type="text" name="titol" placeholder='TITOL' value={formData.titol} onChange={(e) => setFormData({ ...formData, titol: e.target.value })} required />
+                        <textarea placeholder='DESCRIPCIÓ' name="descripcio" value={formData.descripcio} onChange={(e) => setFormData({ ...formData, descripcio: e.target.value })} required />
                     </div>
                     <div className='Derecha-Linia'>
                         <label >Imagen(Opcional):</label>
