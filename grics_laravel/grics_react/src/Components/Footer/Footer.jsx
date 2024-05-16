@@ -6,7 +6,7 @@ const Footer = () => {
     <footer className={styles.footer}>
       <div className={styles["footer-text"]}>
         <p>Grup consolidat: 2021SGR00233</p>
-        <p>Proyecto PID2022-140498OB-100 financiado por:</p>
+        <p>Projecte PID2022-140498OB-100 finançat per:</p>
       </div>
       <div className={styles["Container"]}>
           <div className={styles["Logos"]}>
