@@ -162,22 +162,21 @@ CONTRACTES
   height: 30em;
 }
 
-/*
 
-Estilos para tablet en posición vertical 
-@media (min-width: 600px) and (max-width: 800px) {
-  .contractes{
-      height: 35em;
+
+/*Estilos para tablet en posición vertical */
+@media (min-width: 600px) and (max-width: 1000px) {
+  .grupo_botones {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15em;
+    margin-top: 10em;
   }
+
 }
 
-Estilos para tablet en posición horizontal 
-@media (min-width: 801px) and (max-width: 1024px) {
-  .contractes{
-      height: 40em;
-  }
-}
-*/
+
+
 /* Estilos para móvil */
 @media (max-width: 599px) {
   .contractes{
