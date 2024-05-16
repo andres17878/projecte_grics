@@ -9,6 +9,7 @@ use App\Http\Controllers\MembreController;
 use App\Http\Controllers\LiniaController;
 use App\Http\Controllers\NoticiaController;
 use App\Http\Controllers\ProjecteController;
+use App\Http\Controllers\ImageController;
 
 
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
@@ -143,6 +144,9 @@ Route::middleware(Authenticate::class)->group(function(){
     Route::delete('Projectes/{id}', [ProjecteController::class, 'destroy']);
     Route::post('PublicacionsAdd', [PublicacioController::class, 'store']);
     Route::put('PublicacionsUpdate/{id}', [PublicacioController::class, 'update']);
+    Route::post('LíniesAdd', [LiniaController::class, 'store']);
+    Route::put('LíniesUpdate/{id}', [LiniaController::class, 'update']);
+    Route::post('ImageUpload', [ImageController::class, 'upload']);
 });
 
 Route::controller(AuthController::class)->group(function(){

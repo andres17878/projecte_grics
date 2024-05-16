@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('linies', function (Blueprint $table) {
             $table->id();
-            $table->string('foto');
+            $table->string('foto')->nullable();
             $table->string('titol');
             $table->string('descripcio');
             $table->timestamps();
