@@ -116,7 +116,7 @@ export default function PublicacionsForm() {
             <div className='titolFormP'>
                         <h1>{location.state ? "Editar publicació" : "Nova publicació"}</h1>
                     </div>
-                <form className='formP'>
+                <form className='formP' onSubmit={handleSubmit}>
                     
                     <div>
                         <input type="text" name="nom" value={formData.nom} onChange={e => setFormData({ ...formData, nom: e.target.value})} required  placeholder="Nom"/>
