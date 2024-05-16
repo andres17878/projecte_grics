@@ -1,4 +1,4 @@
-import './FormMembres.css'
+import './CrearNoticia.css'
 import { useState } from 'react';
 
 function formulari_noticia() {

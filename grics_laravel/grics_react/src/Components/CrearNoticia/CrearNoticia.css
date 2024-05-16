@@ -1,0 +1,60 @@
+body {
+    font-family: "Roboto Condensed", sans-serif;
+    font-size: large;
+}
+.titolFormM  h1{
+    font-family: "Roboto Condensed", sans-serif;
+    font-size: 2em;
+    text-align: center;
+    margin-bottom: 0;
+    font-weight:400;
+}
+
+.Formulario {
+    font-family: "Roboto Condensed", sans-serif;
+    /* width: 75%; */
+    height: 40%;
+    margin: 2%;
+    padding: 5%;
+    background-color: #002651;
+    color: white;
+    border-radius: 10px;
+}
+
+.spaceForm {
+    margin-bottom: 1%;
+}
+
+.spaceForm div {
+    margin-bottom: 2%;
+}
+
+.spaceForm input[type="text"],
+.spaceForm input[type="email"],
+.spaceForm input[type="img"] {
+    margin: 1%;
+    width: 40%;
+    padding: 1.5%;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 15px;
+}
+
+.button {
+    display: flex;
+    justify-content: center;
+}
+
+.button .addMembre {
+    background-color: #ccc;
+    border: none;
+    color: black;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 15px;
+}
