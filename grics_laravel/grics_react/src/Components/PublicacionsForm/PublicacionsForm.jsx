@@ -125,7 +125,7 @@ export default function PublicacionsForm() {
                         <input type="text" name="cognom" value={formData.cognom} onChange={e => setFormData({ ...formData, cognom: e.target.value})} required  placeholder="Cognom" />
                     </div>
                     <div>
-                        <input type="date" name="any" value={formData.anyo} onChange={e => setFormData({ ...formData, anyo: e.target.value})} required  placeholder="Any"/>
+                        <input type="number" name="any" value={formData.anyo} onChange={e => setFormData({ ...formData, anyo: e.target.value})} required  placeholder="Any"/>
                     </div>
                     <div>
                         <input type="text" name="titol" value={formData.titol} onChange={e => setFormData({ ...formData, titol: e.target.value})} required  placeholder="Titol"/>
@@ -137,7 +137,7 @@ export default function PublicacionsForm() {
                         <input type="number" name="numero" value={formData.numero} onChange={e => setFormData({ ...formData, numero: e.target.value})} required  placeholder="Numero"/>
                     </div>
                     <div>
-                        <input type="number" name="volum" value={formData.volum} onChange={e => setFormData({ ...formData, volum: e.target.value})} required  placeholder="Volumn"/>
+                        <input type="number" name="volum" value={formData.volum} onChange={e => setFormData({ ...formData, volum: e.target.value})} required  placeholder="Volum"/>
                     </div>
                     <div>
                         <textarea type="text" name="resum" value={formData.resum} onChange={e => setFormData({ ...formData, resum: e.target.value})} required  placeholder="Resum"/>
