@@ -21,6 +21,8 @@ import Login from './Components/Login/Login';
 import Dashboard from './Components/Login/Dashboard';
 import Linies from './Components/NovaLinia/LiniaInvestigacioForm';
 import PublicacionsForm from './Components/PublicacionsForm/PublicacionsForm';
+import ProjecteForm from './Components/FormProjecte/FormulariProjecte';
+import ContractesForm from './Components/FormContratos/FormularioContratos';
 
 import Form_M from './Components/FormMembres/FormMembres';
 
@@ -92,8 +94,14 @@ const router = createBrowserRouter([
     path:'/Publicacions/:id',
     element: <PrivateRoute><PublicacionsForm/></PrivateRoute>
   },
-  
-
+  {
+    path: '/dashboard/Projectes/add',
+    element: <ProjecteForm/>
+  },
+  {
+    path:'dashboard/Contractes/add',
+    element:<ContractesForm/>
+  },
 
 
 
@@ -103,7 +111,7 @@ const router = createBrowserRouter([
 
 
   {
-    path: '/dashboard/Membres/form_Membres',
+    path: '/dashboard/Membres/add',
     element: <Form_M/>,
   },
   

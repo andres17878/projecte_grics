@@ -6,23 +6,22 @@ body {
     padding: 0;
     box-sizing: border-box;
 }
-
-.ContacteC {
-    margin:10px;
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
+.contacte{
+    margin: 5%;
 }
-
-.mapUB {
-    margin:50px;
-    width: 50%;
-    height: auto; 
-    border-radius: 20px;
-    overflow: hidden;
+.contacte_derecha{
+    width: 100%;
+    text-align: center;
 }
-
-.plusInfo {
-    padding-left: 2rem;
-    max-width: 30%;
+.separacion-contacte{
+    margin-top: -1em;
+    width: 100%;
+    background-color: black;
+    height: 1px;
+}
+.contacte_derecha h4 {
+    font-weight: normal;
+}
+.redes{
+    margin-top: 1em;
 }

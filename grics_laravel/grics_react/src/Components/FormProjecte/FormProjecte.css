@@ -1,0 +1,137 @@
+.recuadro_Form_Projecte {
+    width: 90%;
+    margin: 2% auto;
+    background-color: #002651;
+    border-radius: 1em;
+    padding: 1%;
+}
+
+.titulo_nuevos_Projectos{
+    display: flex;
+    justify-content: center; /* Centrar el contenido */
+    align-items: center; /* Centrar verticalmente */
+}
+.flecha_Projectes{
+    width: 3%;
+    height: 2.5em;
+    background-color: white;
+    border-radius: 100%;
+}
+
+.titulo-nou-Projecte{
+    width: 94%;
+    color: white;
+    text-align: center;
+
+}
+
+.formulario-Projecte{
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap; 
+
+}
+
+.Izquierda-Projecte{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+
+.Izquierda-Projecte input{
+    margin: 2em;
+    height: 3em;
+    border-radius: 2em;
+
+}
+.Izquierda-Projecte textarea{
+    margin: 2em;
+    height: 20em;
+    border-radius: 2em;
+
+}
+input::placeholder {
+    text-align: center;
+}
+
+textarea::placeholder {
+    text-align: center;
+    line-height: 20;
+}
+
+.Derecha-Projecte{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    color: white;
+}
+.Derecha-Projecte input[type="text"] {
+    margin: 2em;
+    height: 3em;
+    border-radius: 2em;
+}
+
+.Derecha-Projecte img {
+    max-width: 100%;
+    height: auto; 
+    display: block; 
+    margin: 1em auto;
+    border: 2px solid #333; 
+    border-radius: 10px; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+    background-color: white;
+}
+
+.boton-eliminar-img-Projecto{
+    float: right;
+}
+.boton-Linia {
+    display: flex;
+    justify-content: center;
+
+    width: 100%;
+    height: 100%;
+}
+.estilo-boton{
+    width: 15%;
+    height: 3em;
+    border-radius: 3em;
+    background-color: white;
+    color: black;
+    border: 2px solid black;
+}
+@media only screen and (max-width: 768px) {
+    .flecha_Projectes{
+        width: 2em;
+        height: 2em;
+    }
+    .formulario-Projecte {
+        flex-direction: column; 
+    }
+
+    .Izquierda-Projecte, .Derecha-Projecte {
+        width: 100%; 
+    }
+}
+
+.boton-Projecte {
+    display: flex;
+    justify-content: center;
+    margin-top: 1em; 
+}
+
+.estilo-boton {
+    width: 15%;
+    max-width: 150px; /* Ancho máximo */
+    height: 3em;
+    border-radius: 3em;
+    background-color: white;
+    color: black;
+    border: 2px solid black;
+    cursor: pointer; 
+}
+
+input::placeholder,
+textarea::placeholder {
+    text-align: center;
+}
