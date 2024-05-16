@@ -1,6 +1,7 @@
 import './Linia_InvestigacioForm.css';
 import flecha from '../../assets/BACK/arrow_back.svg';
 import { useState } from 'react';
+import { useRef } from 'react';
 import Swal from "sweetalert2";
 import { useLocation } from "react-router-dom";
 import {useNavigate} from "react-router-dom";
@@ -137,6 +138,15 @@ const LiniaInvestigacioForm = () => {
             setImagePreview(null);
         }
     }
+
+    const inputFileRef = useRef();
+
+    const handleImageRemove = () => {
+        setImagePreview(null);
+        if (inputFileRef.current) {
+            inputFileRef.current.value = '';
+        }
+    };
     return (
          <div className='recuadro_Linies'>
             <div className='titulo_nuevas_Linies'>
@@ -153,7 +163,10 @@ const LiniaInvestigacioForm = () => {
                         <label >Imagen(Opcional):</label>
                         <input type="file" accept="image/*" onChange={handleImageChange} /> 
                         {imagePreview && (
-                            <img src={imagePreview} alt="Imagen seleccionada" />
+                            <div>
+                                <img src={imagePreview} alt="Imagen seleccionada" />
+                                <button className='boton-eliminar-img-Contratos' onClick={handleImageRemove}>Eliminar imagen</button>
+                            </div>
                         )} 
                     </div>
                 </div>
