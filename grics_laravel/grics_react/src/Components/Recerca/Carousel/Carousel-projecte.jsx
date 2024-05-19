@@ -18,11 +18,11 @@ export default function CarouselProyecto() {
       items: 5
     },
     desktop: {
-      breakpoint: { max: 3000, min: 1024 },
+      breakpoint: { max: 3000, min: 1090 },
       items: 2
     },
     tablet: {
-      breakpoint: { max: 1024, min: 464 },
+      breakpoint: { max: 1090, min: 464 },
       items: 1
     },
     mobile: {

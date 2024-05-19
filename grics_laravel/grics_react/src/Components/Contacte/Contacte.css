@@ -25,3 +25,38 @@ body {
 .redes{
     margin-top: 1em;
 }
+
+/* Estilos para tablet en posición vertical */
+@media (min-width: 850px) and (max-width: 1080px) {
+    .contacte{
+        margin: 2%;
+    }
+    .contacte_derecha{
+        width: 100%;
+        height: 70vh;
+
+    }
+    .contacte_derecha h1{
+        margin-top: 10%;
+    }
+    .contacte_derecha h4,h3{
+        margin-top: 5%;
+    }
+}
+/* Estilos para móvil */
+@media (max-width: 480px) {
+    .contacte{
+        margin: 10%;
+    }
+    .contacte_derecha{
+        width: 100%;
+
+    }
+    .contacte_derecha h1{
+        font-size: 1.2em;
+        margin-bottom: 1em;
+    }
+    .contacte_derecha h4,h3{
+        font-size: 1em;
+    }
+}

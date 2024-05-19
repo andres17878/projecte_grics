@@ -107,8 +107,22 @@
 .Derecha-Card-2{
     width: 50%;
     height: auto;
+
 }
 
+@media screen and (max-width: 464px) {
+  .Card-2 {
+    width: 15em; 
+    height: 8em;
+  }
+  .Derecha-Card-2,.descripcion-Card{
+    font-size: 0.8em;
+  }
+
+  .foto-Card {
+    height: 10em;
+  }
+}
 
   
 /*
@@ -139,4 +153,22 @@
   font-size: 1em;
   text-align: left;
   height: 10em;
+}
+
+@media screen and (max-width: 464px) {
+  .Card-3 {
+    width: 15em; 
+    height: 7em;
+    margin-left: 2%;
+    margin-right: 2%;
+  }
+  .descripcion-Card-contractes{
+    font-size: 0.7em;
+  }
+  .grupo_botones_contractes {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 16em;
+  }
+
 }

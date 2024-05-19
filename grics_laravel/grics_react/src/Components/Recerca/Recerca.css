@@ -20,13 +20,13 @@
 }
 
 .line-1 {
-    margin-right: 3em;
+    margin-right: 10%;
     margin-bottom: 0.4em;
     
 }
 
 .line-2 {
-    margin-left: 3em; 
+    margin-left: 10%; 
     margin-bottom: 0.4em;
 
 }
@@ -160,4 +160,51 @@ CONTRACTES
 
 .contractes{
   height: 30em;
+}
+
+
+
+/*Estilos para tablet en posición vertical */
+@media (min-width: 600px) and (max-width: 1000px) {
+  .grupo_botones {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15em;
+    margin-top: 10em;
+  }
+
+}
+
+
+
+/* Estilos para móvil */
+@media (max-width: 599px) {
+  .contractes{
+      height: 25em;
+  }
+  .titulo-recerca {
+    margin-top: 1em;
+    color: black;
+    max-width: 100%;
+    width: 100%;
+    margin-left: 0em;
+    margin-right: 0em;
+    margin-bottom: 5em;
+    display: flex;
+    align-items: center;
+  }
+  .pppp{
+    font-size: 1.2em;
+  }
+  .grupo_botones {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10em;
+    margin-top: 10em;
+  }
+  .projecto {
+    height: 20em;
+    margin-bottom: -6em;
+  }
+  
 }
