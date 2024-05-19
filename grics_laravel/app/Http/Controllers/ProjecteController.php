@@ -20,7 +20,11 @@ class ProjecteController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $acio = Projectes::create($request->all());
+        return response()->json([
+            'message' => 'Línia creada',
+            'status' => 'OK'
+        ]);
     }
 
     /**
@@ -36,7 +40,12 @@ class ProjecteController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+        $acio = Projectes::findOrFail($id);
+        $acio->update($request->all());
+        return response()->json([
+            'message' => 'Projecte actualitzat',
+            'status' => 'OK'
+        ]);
     }
     public function destroy(int $id)
     {

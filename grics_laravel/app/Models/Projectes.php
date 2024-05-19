@@ -12,7 +12,7 @@ class Projectes extends Model
 
     protected $table = "projectes";
 
-    protected $fillable = ['foto', 'titol', 'resum', 'entitats', 'resultats', 'logos_entitats', 'data'];
+    protected $fillable = ['foto', 'titol', 'integrants', 'resum', 'entitats', 'resultats', 'logos_entitats', 'data'];
 
 
     public function membres(): BelongsToMany
