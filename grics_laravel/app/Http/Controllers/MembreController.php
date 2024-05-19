@@ -20,7 +20,11 @@ class MembreController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $acio = Membres::create($request->all());
+        return response()->json([
+            'message' => 'Membre creat',
+            'status' => 'OK'
+        ]);
     }
 
     /**
@@ -36,7 +40,12 @@ class MembreController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+        $membre = Membres::find($id);
+        $membre->update($request->all());
+        return response()->json([
+            'message' => 'Membre actualitzat',
+            'status' => 'OK'
+        ]);
     }
     public function destroy(int $id)
     {
