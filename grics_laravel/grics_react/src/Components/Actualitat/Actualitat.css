@@ -68,3 +68,40 @@
     justify-content: center;
     margin-top: 1em;
 }
+/* 
+h1 {
+    font-size: 40px;
+    font-weight: bold;
+    margin-bottom: 1em;
+} */
+
+@media screen and (max-width: 768px) {
+    .publicacions__container {
+      margin-left: 1em;
+      margin-right: 1em;
+      flex-direction: column;
+    }
+  
+    .publicacions_items {
+      width: 100%;
+    }
+  
+    .linia_publicacion,
+    .linia_publicacion2 {
+      margin-left: 0;
+      margin-right: 0;
+    }
+  
+    .boto_publicacions {
+      width: 2.5em;
+      height: 2.5em;
+    }
+  
+    .botons_paginacio_publicacions {
+      flex-direction: column;
+    }
+  
+    h1 {
+      font-size: 50px;
+    }
+  }
