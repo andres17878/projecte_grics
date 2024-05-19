@@ -1,12 +1,14 @@
-import './CrearNoticia.css'
+import React from 'react';
+import './CrearNoticia.css';
+import flecha from '../../assets/BACK/arrow_back.svg';
 import { useState } from 'react';
+import { useRef } from 'react';
 
-function formulari_noticia() {
+const FormulariNoticia = () => {
     const [imagePreview, setImagePreview] = useState(null);
 
     const handleImageChange = (e) => {
-        e.preventDefault();
-        const file = e.dataTransfer.files[0];
+        const file = e.target.files[0];
         const reader = new FileReader();
 
         reader.onloadend = () => {
@@ -19,42 +21,48 @@ function formulari_noticia() {
             setImagePreview(null);
         }
     }
+    const inputFileRef = useRef();
 
-    const handleDragOver = (e) => {
-        e.preventDefault();
-    }
+    const handleImageRemove = () => {
+        setImagePreview(null);
+        if (inputFileRef.current) {
+            inputFileRef.current.value = '';
+        }
+    };
 
     return (
-        <div className='Formulario'>
-            <div className="spaceForm">
-                <form className='formM'>
-                    <div className='titolFormM'>
-                        <h1>NOVA NOTICIA</h1>
-                    </div>
-                    <div>
-                        <input type="text" id="titulo" name="titulo" placeholder="Títol de la noticia" />
-                    </div>
-                    <div>
-                        <input type="text" id="data" name="data" placeholder="Data de publicació" />
-                    </div>
-                    <div>
-                        <input type="text" id="descripcio" name="descripcio" placeholder="Text de la noticia" />
-                    </div>
-                    <div 
-                        onDrop={handleImageChange} 
-                        onDragOver={handleDragOver} 
-                        style={{height: '200px', width: '200px', border: '1px dashed #ccc'}}
-                    >
-                        {imagePreview && (
-                            <img src={imagePreview} alt="Imagen seleccionada" />
-                        )}
-                    </div>
-                    <div className="button">
-                        <button type="submit" className="addMembre">Publica</button>
-                    </div>
-                </form>
+         <div className='recuadro_Form_Projecte'>
+            <div className='titulo_nuevos_Projectos'>
+                <img src={flecha} alt='back' className='flecha_Projectes'></img>
+                <h1 className='titulo-nou-Projecte'>Nova Noticia</h1>
             </div>
-        </div>
+            <form >
+                <div className='formulario-Projecte'>
+                    <div className='Izquierda-Projecte'>
+                        <input type="text" placeholder='Títol noticia'/>
+                        <input type="text" placeholder='Descripció'/>
+                        <textarea placeholder='RESUM'></textarea>
+                    </div>
+                    <div className='Derecha-Projecte'>
+                        <input type="text" placeholder='Imatge'/>
+                        <label >Imatge</label>
+                        <input type="file" ref={inputFileRef} accept="image/*" onChange={handleImageChange} />                         {imagePreview && (
+                            <div>
+                                <img src={imagePreview} alt="Imagen seleccionada" />
+                                <button className='boton-eliminar-img-Projecto' onClick={handleImageRemove}>Eliminar imatge</button>
+                            </div>
+                        )} 
+                        <input type="text" placeholder='RESULTATS'/>
+
+
+
+                    </div>
+                </div>
+                <div className='boton-Projecte'>
+                    <button className='estilo-boton'>Publica</button>
+                </div>
+            </form>
+         </div>
     )
 }
-export default Form_M
+export default FormulariProjecte;
