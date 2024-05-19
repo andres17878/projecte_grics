@@ -25,6 +25,7 @@ import ProjecteForm from './Components/FormProjecte/FormulariProjecte';
 import ContractesForm from './Components/FormContratos/FormularioContratos';
 
 import Form_M from './Components/FormMembres/FormMembres';
+import FormulariNoticia from './Components/CrearNoticia/CrearNoticia';
 
 const PrivateRoute = ({ children }) => {
   const isLoggedIn = localStorage.getItem('token');
@@ -125,6 +126,14 @@ const router = createBrowserRouter([
   {
     path:'/Membres/:id',
     element:<PrivateRoute><Form_M/></PrivateRoute>
+  },
+  {
+    path: '/dashboard/Actualitat/add',
+    element: <PrivateRoute><FormulariNoticia/></PrivateRoute>,
+  },
+  {
+    path:'/Actualitat/:id',
+    element:<PrivateRoute><FormulariNoticia/></PrivateRoute>
   }
   
 ]);

@@ -112,6 +112,11 @@ Route::get('allNoticies', function(Request $request){
     return response() ->json($noticies);
 });
 
+Route::get('allActualitat/{id}', function(Request $request, $id){
+    $noticies = \DB::table('noticies')->where('id', $id)->first();
+    return response() ->json($noticies);
+});
+
 Route::get('noticies/{id}', function(Request $request, $id){
     $noticies = \DB::table('noticies')->where('id', $id)->first();
     return response() ->json($noticies);
@@ -168,6 +173,8 @@ Route::middleware(Authenticate::class)->group(function(){
     Route::post('MembresAdd', [MembreController::class, 'store']);
     Route::put('MembresUpdate/{id}', [MembreController::class, 'update']);
     Route::post('CvUpload', [CvController::class, 'upload']);
+    Route::post('NoticiesAdd', [NoticiaController::class, 'store']);
+    Route::put('NoticiesUpdate/{id}', [NoticiaController::class, 'update']);
 });
 
 Route::controller(AuthController::class)->group(function(){
