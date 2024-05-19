@@ -84,7 +84,11 @@ const router = createBrowserRouter([
   },
   {
     path: '/dashboard/Línies/add',
-    element: <Linies/>,
+    element: <PrivateRoute><Linies/></PrivateRoute>
+  },
+  {
+    path: '/Línies/:id',
+    element: <PrivateRoute><Linies/></PrivateRoute>
   },
   {
     path: '/dashboard/publicacions/add',
@@ -96,7 +100,11 @@ const router = createBrowserRouter([
   },
   {
     path: '/dashboard/Projectes/add',
-    element: <ProjecteForm/>
+    element: <PrivateRoute><ProjecteForm/></PrivateRoute>
+  },
+  {
+    path:'/Projectes/:id',
+    element:<PrivateRoute><ProjecteForm/></PrivateRoute>
   },
   {
     path:'dashboard/Contractes/add',
@@ -112,8 +120,12 @@ const router = createBrowserRouter([
 
   {
     path: '/dashboard/Membres/add',
-    element: <Form_M/>,
+    element: <PrivateRoute><Form_M/></PrivateRoute>,
   },
+  {
+    path:'/Membres/:id',
+    element:<PrivateRoute><Form_M/></PrivateRoute>
+  }
   
 ]);
 

@@ -10,7 +10,7 @@ class Membres extends Model
 {
     use HasFactory;
     protected $table = 'membres';
-    protected $fillable = ['email', 'nom', 'cognom', 'carrec', 'foto', 'info'];
+    protected $fillable = ['email', 'nom', 'cognom', 'carrec', 'foto', 'info', 'cv', 'data'];
 
     public function publicacions(): BelongsToMany
     {

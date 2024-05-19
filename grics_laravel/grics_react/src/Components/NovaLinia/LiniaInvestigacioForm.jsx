@@ -21,6 +21,7 @@ const LiniaInvestigacioForm = () => {
     useEffect(() => {
         if (location.state) {
             setFormData(location.state.data);
+            setImagePreview(location.state.data.foto);
         }
     }, [location]);
 
@@ -49,7 +50,7 @@ const LiniaInvestigacioForm = () => {
             const token = localStorage.getItem("token");
 
             if (location.state) {
-                await axios.put(`http://localhost:8000/api/LíniesAdd/${location.state.data.id}`, data, {
+                await axios.put(`http://localhost:8000/api/LíniesUpdate/${location.state.data.id}`, data, {
                     headers: {
                         Authorization: `Bearer ${token}`,
                     },
@@ -167,7 +168,7 @@ const LiniaInvestigacioForm = () => {
                     </div>
                 </div>
                 <div className='boton-Linia'>
-                    <button type="submit" className='estilo-boton'>Afegeix</button>
+                    <button type="submit" className='estilo-boton'>{location.state ? "Actualitzar" : "Afegir"}</button>
                 </div>
             </form>
         </div>

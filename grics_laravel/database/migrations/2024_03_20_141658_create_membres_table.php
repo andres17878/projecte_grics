@@ -18,7 +18,10 @@ return new class extends Migration
             $table->string('cognom');
             $table->string('carrec');
             $table->string('foto');
-            $table->string('info'); 
+            $table->string('info');
+            $table->string('cv');
+            $table->timestamps();
+
         });
     }
 
