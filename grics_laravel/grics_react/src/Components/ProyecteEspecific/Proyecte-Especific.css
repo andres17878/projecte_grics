@@ -79,3 +79,83 @@
   width: 40px; 
   height: 40px; 
 }
+
+
+
+/* Estilos para tablet en posición vertical */
+@media (min-width: 600px) and (max-width: 830px) {
+  .container {
+      width: 90%;
+  }
+
+  .titulo-proyecto-especifico{
+    font-size: 1.2em;
+
+}
+.titul-projecte-especific {
+  margin-top: 5em;
+  color: black;
+  margin-left: 3em;
+  margin-right: 3em;
+  margin-bottom: 5em;
+  display: flex;
+  align-items: center;
+}
+}
+
+/* Estilos para tablet en posición horizontal */
+@media (min-width: 831px) and (max-width: 1090px) {
+  .container {
+      width: 85%;
+  }
+  .titulo-proyecto-especifico{
+    font-size: 1.5em;
+
+}
+.titul-projecte-especific {
+  margin-top: 5em;
+  color: black;
+  margin-left: 3em;
+  margin-right: 3em;
+  margin-bottom: 5em;
+  display: flex;
+  align-items: center;
+}
+}
+
+/* Estilos para móvil */
+@media (max-width: 599px) {
+  .container {
+      width: 95%;
+  }
+  .titulo-proyecto-especifico {
+    font-size: 1.5em;
+    text-align: center;
+  }
+
+.titul-projecte-especific {
+  margin-top: 5em;
+  color: black;
+  margin-left: 1em;
+  margin-right: 1em;
+  margin-bottom: 5em;
+  display: flex;
+  align-items: center;
+}
+.imagen-resumen-projecte{
+  display: flex;
+  flex-direction: column;
+}
+.info-projecte {
+  font-size: 1em;
+  flex: 1;
+  width: 100%;
+}
+.imagen-projecte-unic {
+  flex: 0 0 auto;
+  width: 100%;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+}

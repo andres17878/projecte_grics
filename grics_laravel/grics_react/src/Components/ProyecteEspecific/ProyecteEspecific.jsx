@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { useParams } from "react-router-dom";
-import Menu from '../Navbar/Menu';
+import Menu from '../Navbar/MenuBureger';
 import './Proyecte-Especific.css';
 import Footer from "../Footer/Footer";
 import { Link } from 'react-router-dom';
@@ -37,7 +37,7 @@ export default function ProyecteEspecific() {
         </div>
         <div className='titul-projecte-especific'>
                 <div className='line-1'></div>
-                <h1>Projecte {data.titol}</h1>
+                <h1 className='titulo-proyecto-especifico'>Projecte {data.titol}</h1>
                 <div className='line-2'></div>
             </div>
 
