@@ -21,7 +21,7 @@ function Miembro({ miembro, isHovered }) {
                 <li><u>Cognom: </u>{miembro.cognom}</li>
                 <li><u>Carrec: </u>{miembro.carrec}</li>
                 <li><u>Email: </u>{miembro.email}</li>
-                <li><a href={personalCV} target="_blank" rel="noopener noreferrer"><u>Visualiza CV</u></a></li>
+                <li><a href={miembro.cv} target="_blank" rel="noopener noreferrer"><u>Visualiza CV</u></a></li>
                 <li className="descripcion-li">
                     <u>Descripción: </u>
                     <span className="descripcion-texto">

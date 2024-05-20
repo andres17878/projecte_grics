@@ -22,8 +22,9 @@ class ProjectesSeeder extends Seeder
                 'entitats' => $faker->company,
                 'resultats' => $faker->text,
                 'logos_entitats' => $faker->imageUrl,
-                'data' => $faker->date,
                 'integrants' => $faker->name,
+                'created_at' => now(),
+                'updated_at'=> now(),
             ]);
         }
 

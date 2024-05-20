@@ -9,6 +9,8 @@ use App\Http\Controllers\MembreController;
 use App\Http\Controllers\LiniaController;
 use App\Http\Controllers\NoticiaController;
 use App\Http\Controllers\ProjecteController;
+use App\Http\Controllers\ImageController;
+use App\Http\Controllers\CvController;
 
 
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
@@ -27,6 +29,11 @@ Route::get('prueba', function(Request $request){
 
 Route::get('allMembres', function(Request $request){
     $membres = \DB::table('membres')->get();
+    return response() ->json($membres);
+});
+
+Route::get('allMembres/{id}', function(Request $request, $id){
+    $membres = \DB::table('membres')->where('id', $id)->first();
     return response() ->json($membres);
 });
 
@@ -67,6 +74,11 @@ Route::get('allLinies', function(Request $request){
     return response() ->json($linies);
 });
 
+Route::get('allLínies/{id}', function(Request $request, $id){
+    $linies = \DB::table('linies')->where('id', $id)->first();
+    return response() ->json($linies);
+});
+
 Route::get('allIdLinies', function(Request $request){
     $linies = \DB::table('linies')->select('id')->get();
     return response() ->json($linies);
@@ -100,6 +112,11 @@ Route::get('allNoticies', function(Request $request){
     return response() ->json($noticies);
 });
 
+Route::get('allActualitat/{id}', function(Request $request, $id){
+    $noticies = \DB::table('noticies')->where('id', $id)->first();
+    return response() ->json($noticies);
+});
+
 Route::get('noticies/{id}', function(Request $request, $id){
     $noticies = \DB::table('noticies')->where('id', $id)->first();
     return response() ->json($noticies);
@@ -118,6 +135,11 @@ Route::get('allIdNoticies', function(Request $request){
 // Routes per a la taula projectes
 Route::get('allProjectes', function(Request $request){
     $projectes = \DB::table('projectes')->get();
+    return response() ->json($projectes);
+});
+
+Route::get('allProjectes/{id}', function(Request $request, $id){
+    $projectes = \DB::table('projectes')->where('id', $id)->first();
     return response() ->json($projectes);
 });
 
@@ -143,6 +165,16 @@ Route::middleware(Authenticate::class)->group(function(){
     Route::delete('Projectes/{id}', [ProjecteController::class, 'destroy']);
     Route::post('PublicacionsAdd', [PublicacioController::class, 'store']);
     Route::put('PublicacionsUpdate/{id}', [PublicacioController::class, 'update']);
+    Route::post('LíniesAdd', [LiniaController::class, 'store']);
+    Route::put('LíniesUpdate/{id}', [LiniaController::class, 'update']);
+    Route::post('ImageUpload', [ImageController::class, 'upload']);
+    Route::post('ProjectesAdd', [ProjecteController::class, 'store']);
+    Route::put('ProjectesUpdate/{id}', [ProjecteController::class, 'update']);
+    Route::post('MembresAdd', [MembreController::class, 'store']);
+    Route::put('MembresUpdate/{id}', [MembreController::class, 'update']);
+    Route::post('CvUpload', [CvController::class, 'upload']);
+    Route::post('NoticiesAdd', [NoticiaController::class, 'store']);
+    Route::put('NoticiesUpdate/{id}', [NoticiaController::class, 'update']);
 });
 
 Route::controller(AuthController::class)->group(function(){

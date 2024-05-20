@@ -20,7 +20,12 @@ class NoticiaController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $acio = Noticies::create($request->all());
+        return response()->json([
+            'message' => 'Noticia creada',
+            'status' => 'OK'
+        ]);
+
     }
 
     /**
@@ -36,7 +41,12 @@ class NoticiaController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+        $noticia = Noticies::find($id);
+        $noticia->update($request->all());
+        return response()->json([
+            'message' => 'Noticia actualitzada',
+            'status' => 'OK'
+        ]);
     }
     public function destroy(int $id)
     {

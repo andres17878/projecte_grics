@@ -156,4 +156,32 @@
   }
 
 
+@media screen and (max-width: 768px) {
+  /* .contenedor-noticia {
+    padding: 30px 5%;
+  } */
+  .contenedor-noticia {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .imagen-noticia {
+    width: 100%;
+    margin-right: 0;
+  }
+
+  .contenido-noticia {
+    align-items: center;
+  }
+  .titol {
+    text-align: center;
+    font-size: 30px !important;
+
+  }
+  .leer-mas {
+    position: relative;
+    bottom: auto;
+    right: auto;
+    margin-top: 15px;
+  }
 }

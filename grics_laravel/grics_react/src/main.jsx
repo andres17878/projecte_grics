@@ -1,5 +1,7 @@
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
+import { Navigate} from 'react-router-dom';
+import PropTypes from 'prop-types';
 
 import {
   createBrowserRouter,
@@ -23,6 +25,18 @@ import ProjecteForm from './Components/FormProjecte/FormulariProjecte';
 import ContractesForm from './Components/FormContratos/FormularioContratos';
 
 import Form_M from './Components/FormMembres/FormMembres';
+import FormulariNoticia from './Components/CrearNoticia/CrearNoticia';
+
+const PrivateRoute = ({ children }) => {
+  const isLoggedIn = localStorage.getItem('token');
+
+  return isLoggedIn ? children : <Navigate to="/login" />;
+};
+
+PrivateRoute.propTypes = {
+  children: PropTypes.node.isRequired,
+};
+
 
 
 const router = createBrowserRouter([
@@ -71,19 +85,27 @@ const router = createBrowserRouter([
   },
   {
     path: '/dashboard/Línies/add',
-    element: <Linies/>,
+    element: <PrivateRoute><Linies/></PrivateRoute>
+  },
+  {
+    path: '/Línies/:id',
+    element: <PrivateRoute><Linies/></PrivateRoute>
   },
   {
     path: '/dashboard/publicacions/add',
-    element: <PublicacionsForm/>
+    element: <PrivateRoute><PublicacionsForm/></PrivateRoute>
   },
   {
     path:'/Publicacions/:id',
-    element: <PublicacionsForm/>
+    element: <PrivateRoute><PublicacionsForm/></PrivateRoute>
   },
   {
     path: '/dashboard/Projectes/add',
-    element: <ProjecteForm/>
+    element: <PrivateRoute><ProjecteForm/></PrivateRoute>
+  },
+  {
+    path:'/Projectes/:id',
+    element:<PrivateRoute><ProjecteForm/></PrivateRoute>
   },
   {
     path:'dashboard/Contractes/add',
@@ -98,11 +120,25 @@ const router = createBrowserRouter([
 
 
   {
-    path: '/dashboard/Membres/form_Membres',
-    element: <Form_M/>,
+    path: '/dashboard/Membres/add',
+    element: <PrivateRoute><Form_M/></PrivateRoute>,
   },
+  {
+    path:'/Membres/:id',
+    element:<PrivateRoute><Form_M/></PrivateRoute>
+  },
+  {
+    path: '/dashboard/Actualitat/add',
+    element: <PrivateRoute><FormulariNoticia/></PrivateRoute>,
+  },
+  {
+    path:'/Actualitat/:id',
+    element:<PrivateRoute><FormulariNoticia/></PrivateRoute>
+  }
   
 ]);
+
+
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
