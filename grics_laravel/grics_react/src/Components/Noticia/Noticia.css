@@ -13,16 +13,17 @@
 }
 
 .contenido-noticia {
+  width: 100%;
   flex: 1;
   display: flex;
-  flex-direction: column; /* Align children in a column */
+  flex-direction: column; 
 }
 
 .titol {
   color: #333;
   font-weight: regular;
   font-size: 21px;
-  margin-bottom: 10px; /* Add margin between title and text */
+  margin-bottom: 10px; 
   align-self: flex-start;
 }
 
@@ -41,4 +42,118 @@
   color: #000000;
   font-weight: regular;
   padding: 10px 7%;
+}
+
+/* Estilos para tablet en posición vertical */
+@media (min-width: 600px) and (max-width: 830px) {
+
+  .contenedor-noticia{
+    width: 80%;
+  }
+  .titol {
+    color: #333;
+    font-weight: regular;
+    font-size: 1.2em;
+    margin-bottom: 10px; 
+    align-self: flex-start;
+  }
+  
+  .texto {
+    color: #666;
+    opacity: 0.85;
+    text-align: left;
+    font-size: 1em;
+  }
+  
+  .leer-mas {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin-top: 15px; 
+    text-decoration: none;
+    color: #000000;
+    font-size: 1em;
+    padding: 10px 7%;
+  }
+}
+
+/* Estilos para tablet en posición horizontal */
+@media (min-width: 831px) and (max-width: 1100px) {
+
+  .contenedor-noticia{
+    width: 80%;
+  }
+  .titol {
+    color: #333;
+    font-size: 1.2em;
+    margin-bottom: 10px; 
+    align-self: flex-start;
+  }
+  
+  .texto {
+    color: #666;
+    opacity: 0.85;
+    text-align: left;
+    font-size: 1em;
+  }
+  
+  .leer-mas {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin-top: 15px; 
+    text-decoration: none;
+    color: #000000;
+    font-size: 1em;
+    padding: 10px 7%;
+  }
+}
+
+/* Estilos para móvil */
+@media (max-width: 599px) {
+
+  .contenedor-noticia {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    align-items: center;
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+  .titol {
+    color: #333;
+    font-size: 1em;
+    margin-bottom: 10px; 
+    align-self: flex-start;
+  }
+  
+  .texto {
+    color: #666;
+    opacity: 0.85;
+    text-align: left;
+    font-size: 0.8em;
+  }
+  
+  .leer-mas {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin-top: 15px; 
+    text-decoration: none;
+    color: #000000;
+    font-size: 0.8em;
+    padding: 10px 7%;
+  }
+
+  .publicacions__container {
+    margin-top: 65px;
+    color: black;
+    margin-left: 2em;
+    margin-right: 2em;
+    margin-bottom: 65px;
+    display: flex;
+    align-items: center;
+  }
+
+
 }
