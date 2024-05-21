@@ -1,8 +1,9 @@
 import './FormMembres.css';
 import flecha from '../../assets/BACK/arrow_back.svg';
-import { useState, useRef, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import axios from 'axios';
 import Swal from 'sweetalert2';
 
@@ -13,7 +14,6 @@ function Form_M() {
     const [cvPath, setCvPath] = useState(null);
     const [imagen, setImagen] = useState(null);
     const [cv, setCv] = useState(null);
-    const inputFileRef = useRef();
     const [imagePreview, setImagePreview] = useState(null);
     const [cvFile, setCvFile] = useState(null);
     const [showUploadButton, setShowUploadButton] = useState(true);
@@ -218,6 +218,11 @@ function Form_M() {
 
     return (
         <div className='Formulario'>
+            <div className="goBackContainerMembres">
+                <Link to="/dashboard" className="imgBack">
+                    <img src={flecha} alt="back" />
+                </Link>
+            </div>
             <div className="spaceForm">
                 <form className='formM' onSubmit={handleSubmit}>
                     <div className='titolFormM'>

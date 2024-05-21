@@ -18,6 +18,16 @@
     border-radius: 100%;
 }
 
+.boton_volver_Projecte{
+    position: absolute;
+    left: 20px;
+    top: 20px;
+}
+
+.boton_volver_Projecte:hover{
+    cursor: pointer;
+}
+
 .titulo-nou-Projecte{
     width: 94%;
     color: white;

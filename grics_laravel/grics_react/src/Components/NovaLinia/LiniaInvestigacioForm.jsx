@@ -146,8 +146,10 @@ const LiniaInvestigacioForm = () => {
 
     return (
         <div className='recuadro_Linies'>
+            <div className='boton_volver'>
+                <img src={flecha} alt="flecha" onClick={() => navigate("/dashboard")} />
+            </div>
             <div className='titulo_nuevas_Linies'>
-                <img src={flecha} alt='back' className='flecha_Linies' />
                 <h1 className='titulo-Linia'>{location.state ? "Edita la línia" : "Nova línia"}</h1>
             </div>
             <form onSubmit={handleSubmit}>

@@ -157,8 +157,10 @@ const FormulariProjecte = () => {
 
     return (
          <div className='recuadro_Form_Projecte'>
+            <div className='boton_volver_Projecte'>
+                <img src={flecha} alt = "flecha" onClick={() => navigate("/dashboard")} />
+            </div>
             <div className='titulo_nuevos_Projectos'>
-                <img src={flecha} alt='back' className='flecha_Projectes'></img>
                 <h1 className='titulo-nou-Projecte'>Nou Projecte</h1>
             </div>
             <form onSubmit={handleSubmit} >
