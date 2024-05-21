@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import './CrearNoticia.css';
 import flecha from '../../assets/BACK/arrow_back.svg';
 import { useLocation, useNavigate } from 'react-router-dom';
@@ -144,8 +144,10 @@ const FormulariNoticia = () => {
 
     return (
         <div className='recuadro_Form_Projecte'>
+            <div className='boton_volver_Projecte'>
+                <img src={flecha} alt = 'flecha' onClick={() => navigate('/dashboard')} />
+            </div>
             <div className='titulo_nuevos_Projectos'>
-                <img src={flecha} alt='back' className='flecha_Projectes' onClick={() => navigate(-1)} />
                 <h1 className='titulo-nou-Projecte'>{location.state ? "Edita Noticia" : "Nova Noticia"}</h1>
             </div>
             <form onSubmit={handleSubmit}>

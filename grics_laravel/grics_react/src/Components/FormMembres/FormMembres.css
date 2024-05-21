@@ -15,11 +15,17 @@ body {
 
 .Formulario {
     height: 40%;
-    margin: 1%;
+    margin: 5%;
     padding: 5%;
     background-color: #002651;
     color: white;
     border-radius: 10px;
+}
+
+.goBackContainerMembres{
+    position: absolute;
+    top: 20px;
+    left: 20px;
 }
 
 .spaceForm div {

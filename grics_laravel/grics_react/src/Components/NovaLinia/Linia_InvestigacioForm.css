@@ -11,6 +11,17 @@
     justify-content: center; /* Centrar el contenido */
     align-items: center; /* Centrar verticalmente */
 }
+
+.boton_volver{
+    position: absolute;
+    left: 20px;
+    top: 20px;
+}
+
+.boton_volver:hover{
+    cursor: pointer;
+}
+
 .flecha_Linies{
     width: 3%;
     height: 2.5em;
