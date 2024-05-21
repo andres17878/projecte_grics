@@ -29,7 +29,11 @@ export default function Noticia(props) {
       <img src={data.foto} alt={data.titol} className="imagen-noticia" />
       <div className="contenido-noticia">
         <Link to={`/noticia/${data.id}`} className="titol">{data.titol}</Link>
-        <p className='texto'>{data.descripcio}</p>
+        <p className='texto'>
+        {data.descripcio.length > 100 
+          ? `${data.descripcio.substring(0, 100)}...` 
+          : data.descripcio}
+      </p>
         <Link to={`/noticia/${data.id}`} className="leer-mas">Llegir mes</Link>
 
       </div>
