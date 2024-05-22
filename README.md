@@ -7,3 +7,14 @@ https://docs.google.com/document/d/1RpYyXhs1HJ_K_mtJ7zlnxIrL392ddxrr/edit?usp=sh
 
 # FIGMA 
 https://www.figma.com/proto/daQzAb9tj931sJpyDKq3nL/GRICS-Mockup?node-id=3-11&starting-point-node-id=3%3A11
+
+# VIDEO DEMO
+
+![video](./video_demo/demo_grics.webm)
+
+### Fet per l'alumnat de DAW2 de l'Institut TIC de Barcelona:
+
+#### Andrés Zambrano Aray
+#### Anxo Aragundi Mesías
+#### Angelo Montenegro Zavala
+#### Eric Sánchez Vázquez

@@ -22,6 +22,7 @@ const LiniaInvestigacioForm = () => {
         if (location.state) {
             setFormData(location.state.data);
             setImagePreview(location.state.data.foto);
+            setImagePath(location.state.data.foto);
         }
     }, [location]);
 

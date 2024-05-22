@@ -30,6 +30,7 @@ const FormulariProjecte = () => {
         if (location.state) {
             setFormData(location.state.data);
             setImagePreview(location.state.data.foto);
+            setImagePath(location.state.data.foto);
         }
     } , [location]);
 
@@ -186,7 +187,7 @@ const FormulariProjecte = () => {
                     </div>
                 </div>
                 <div className='boton-Projecte'>
-                    <button className='estilo-boton'>Afegeix</button>
+                    <button className='estilo-boton' type="submit">{location.state ? "Actualitzar" : "Afegir"}</button>
                 </div>
             </form>
          </div>

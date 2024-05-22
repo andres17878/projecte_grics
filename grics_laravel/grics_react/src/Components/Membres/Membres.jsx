@@ -1,7 +1,7 @@
 import './Membres.css'
 import Footer from "../Footer/Footer";
 import Comp_Membres from '../MiembroComp/MiembroComp'
-import general from '../../assets/membre/general.jpg'
+//import general from '../../assets/membre/general.jpg'
 import MenuBurger from '../Navbar/MenuBureger';
 function Membre() {
   return (
@@ -11,7 +11,6 @@ function Membre() {
 
       <div className="contenedorMembres">
           <div className="imgMembres">
-              <img className="generalMiembros" src={general} alt="foto principal" />
           </div>
           <div className='Membress'>
             <div className='div1'>  
